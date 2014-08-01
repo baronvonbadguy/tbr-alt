@@ -2,8 +2,8 @@
 /* Italic */
 @font-face {
     font-family: 'League Gothic';
-    src: url('fonts/leaguegothic-italic-webfont.woff') format('woff'),
-         url('fonts/leaguegothic-italic-webfont.ttf') format('truetype');
+    src: url('../fonts/leaguegothic-italic-webfont.woff') format('woff'),
+         url('../fonts/leaguegothic-italic-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 
@@ -12,8 +12,8 @@
 /* Regular */
 @font-face {
     font-family: 'League Gothic';
-    src: url('fonts/leaguegothic-regular-webfont.woff') format('woff'),
-         url('fonts/leaguegothic-regular-webfont.ttf') format('truetype');
+    src: url('../fonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('../fonts/leaguegothic-regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 

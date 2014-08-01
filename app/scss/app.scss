@@ -45,7 +45,7 @@
   "foundation/components/visibility";
 
 @import "appstyles";
-@import url(http://fonts.googleapis.com/css?family=Questrial);
+@import url(http://fonts.googleapis.com/css?family=Oswald:300|Roboto|Droid+Sans);
 //---------------------------------------
 //-------------M I X I N S---------------
 //---------------------------------------
@@ -108,9 +108,8 @@ html {
 }
 
 #page-programs {
-   @include background-image('/images/programs.jpg');
-  height: 500px;
-
+  @include background-image('/images/programs.jpg');
+  overflow-y: scroll;
   & > .row > h1 {
     font-family: 'League Gothic';
     font-size: 4em;
@@ -122,10 +121,25 @@ html {
   span.fa-stack {
     font-size: 7em;
     width: 100%;
+    @include media(mobile) {
+      font-size: 5em;
+    }
+  }
+  p, h2, h4{
+    font-family: 'Droid Sans';
+    color: ivory; 
   }
   h2 {
     color: ivory;
     text-align: center;
+  }
+  h4 {
+    text-align: center;
+  }
+  p {
+    padding: 10px;
+    text-align: justify; 
+    background-color: rgba(#222222, 0.75);
   }
 }
 

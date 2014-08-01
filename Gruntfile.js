@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 					quiet: true
 				},
 				files: {
-					'<%= app %>/css/app.css': '<%= app %>/scss/app.scss'
+					'<%= app %>/css/app--no-prefix.css': '<%= app %>/scss/app.scss'
 				}
 			}
 		},
@@ -121,6 +121,10 @@ module.exports = function(grunt) {
 				files: '<%= app %>/**/*.jade',
 				tasks: ['jade']
 			},
+			autoprefixer: {
+				files: '<%= app%>/css/app--no-prefix.css',
+				tasks: ['autoprefixer']
+			},
 			livereload: {
 				files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
 				options: {
@@ -164,7 +168,17 @@ module.exports = function(grunt) {
 					'foundation'
 				]
 			}
-		}
+		},
+
+		autoprefixer: {
+        	single_file: {
+        		src: '<%= app %>/css/app--no-prefix.css',
+        		dest: '<%= app %>/css/app.css'
+        	},
+    		options: {
+  				browsers: ['last 2 version', '> 5%', 'ie 9', 'chrome 20']
+			}
+        }
 
 	});
 
@@ -177,5 +191,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('server-dist', ['connect:dist']);
 	
 	grunt.registerTask('publish', ['compile-jade', 'compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
-
+	grunt.loadNpmTasks('grunt-autoprefixer');
 };
