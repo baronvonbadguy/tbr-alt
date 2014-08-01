@@ -2,28 +2,42 @@ doctype html
 html(class="no-js", lang="en")
     include header
     body
-        div.row
-            div(class="small-12 small-centered medium-10 medium-centered large-8 large-centered columns panel radius")
-                h1 Yo Foundation 5!
-                ul
-                    li Sass compiling (Ruby or Node/Libsass)
-                    li Jade templating engine (option)
-                    li Publishing to dist directory
-                    li Server with LiveReload
-                    li JSHint
-                    li Grunt Bower install
-                    li Imagemin
-                    li Font Awesome (option)
-                h1 Grunt tasks:
-                ul
-                    li 'grunt' - watching (Sass, Server on 127.0.0.1:9000 with LiveReload)
-                    li 'grunt compile-sass' - Sass
-                    li 'grunt compile-jade' - Jade
-                    li 'grunt validate-js' - JSHint
-                    li 'grunt bower-install' - injecting bower libraries
-                    li 'grunt publish' - dist directory
-                    li 'grunt server-dist' - server on 127.0.0.1:9001 - dist directory (preview only)
-                h2(class="text-right")
-                    a(href="https://github.com/juliancwirko/generator-zf5")
-                        i(class="fa fa-twitter")
+        .row.full-width
+            #page-splash.small-12.columns
+                #splash-title-container
+                    #splash-title 
+                        h1 TROY BIKE RESCUE
+                    #splash-donate-button
+                        form(action='https://www.paypal.com/cgi-bin/webscr', method='post')
+                            input(name='cmd', value='_s-xclick', type='hidden')
+                            input(name='hosted_button_id', value='7G4M6AM26W9T6', type='hidden')
+                            br
+                            input(src='/images/donate-button.svg', name='submit', alt='PayPal -The safer, easier way to pay online!', border='0', type='image')
+                            img(src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif', height='1', width='1')
+                            br
+
+        .row.full-width
+            #page-members.small-12.columns
+                .row
+                    .small-3.columns
+                        .member-picture
+                        .member-info
+                            h5 name
+                            h5 position
+        .row.full-width
+            #page-programs.small-12.columns
+                .row
+                    h1 COME HANG OUT!
+                .row
+                    .small-6.columns
+                        span.fa-stack
+                            i.fa.fa-circle.fa-stack-2x
+                            i.fa.fa-graduation-cap.fa-stack-1x.fa-inverse
+                        h2 learn &amp; earn
+                    .small-6.columns
+                        span.fa-stack
+                            i.fa.fa-circle.fa-stack-2x
+                            i.fa.fa-female.fa-stack-1x.fa-inverse
+                        h2 fem shop
+
         include footer

@@ -44,4 +44,99 @@
   "foundation/components/offcanvas",
   "foundation/components/visibility";
 
-  @import "appstyles";
+@import "appstyles";
+@import url(http://fonts.googleapis.com/css?family=Questrial);
+//---------------------------------------
+//-------------M I X I N S---------------
+//---------------------------------------
+@mixin media($type) {
+  @if $type == desktop {
+    @media only screen and (min-width: 1025px) {
+      @content;
+    }
+  }
+  @if $type == tablet {
+    @media only screen and (min-width: 641px) {
+      @content;
+    }
+  }
+  @else if $type == mobile {
+    @media only screen and (max-width: 640px) {
+      @content;
+    }
+  }
+}
+
+@mixin background-image($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center; 
+  background-size: cover;
+}
+
+html {
+  padding: 0 0;
+  body {
+    background: #222222;
+    padding: 0 0;
+    & > .row {
+      margin: 0 0;
+    }
+  }
+}
+
+#page-splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  padding: 0 0;
+  @include background-image('/images/splash.jpg');
+  #splash-title h1{
+    font-family: 'League Gothic';
+    text-align: center;
+    color: ivory;
+    font-size: 7em;
+    line-height: 1em;
+  }
+  #splash-donate-button {
+    width: 200px;
+    margin: 0 auto;
+  }
+}
+
+#page-programs {
+   @include background-image('/images/programs.jpg');
+  height: 500px;
+
+  & > .row > h1 {
+    font-family: 'League Gothic';
+    font-size: 4em;
+    letter-spacing: .1em;
+    margin-top: .4em;
+    color: ivory;
+    text-align: center;
+  }
+  span.fa-stack {
+    font-size: 7em;
+    width: 100%;
+  }
+  h2 {
+    color: ivory;
+    text-align: center;
+  }
+}
+
+#page-members {
+  background-color: ivory;
+  height: 500px;
+}
+
+.full-width {
+ width: 100%;
+ margin-left: auto;
+ margin-right: auto;
+ max-width: initial;
+}
