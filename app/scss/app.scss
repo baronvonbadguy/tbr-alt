@@ -126,23 +126,35 @@ h1 {
   }
   .blockgrid-li {
     padding-bottom: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     background-color: rgba(#222222, 0.75);
     @include media(tablet) {
       background-color: transparent;
       margin-bottom: 0px;
     }
+    @include media(mobile) {
+      padding:0;
+      .columns {
+        padding:0;
+        margin:0;
+      }
+
+    }
   }
   span.fa-stack {
     font-size: 2em;
-    width: 100%;
-    .fa-circle{
+    .fa-circle {
       display: none;
       @include media(tablet) {
         display: block;
       }
     }
     @include media(tablet) {
+      width: 100%;
+      text-align: center;
+      font-size: 4em;
+    }
+    @include media(desktop) {
       font-size: 6em;
     }
   }
@@ -151,12 +163,14 @@ h1 {
   }
   h2 {
     font-family: 'League Gothic';
-    font-size: 2em;
+    font-size: 2.3em;
     letter-spacing: .05em;
     float: left;
     margin-left: 10px;
+    height: 1em;
     @include media(mobile) {
-        padding: 0px;
+      margin-top: .2em;
+      padding: 0px;
     }
     @include media(tablet) {
       float: none;
@@ -167,6 +181,9 @@ h1 {
   h5 {
     font-family: 'Droid Sans';
     text-align: center;
+    @include media(mobile) {
+
+    }
     &.spacer {
       display: none;
       visibility: hidden;
@@ -178,6 +195,9 @@ h1 {
   p {
     margin: 0 0;
     padding: 10px;
+    border-bottom: ivory;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
     text-align: justify; 
     font-family: 'Droid Sans';
     @include media(tablet) {
