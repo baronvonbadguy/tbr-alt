@@ -8426,7 +8426,7 @@ h1 {
 }
 
 #page-programs {
-  background-image: url("/images/programs.jpg");
+  background-image: url("/images/programs-alt.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top center;
@@ -8437,10 +8437,26 @@ h1 {
 }
 #page-programs .blockgrid-li {
   padding-bottom: 0px;
+  margin-bottom: 10px;
+  background-color: rgba(34, 34, 34, 0.75);
+}
+@media only screen and (min-width: 40.063em) {
+  #page-programs .blockgrid-li {
+    background-color: transparent;
+    margin-bottom: 0px;
+  }
 }
 #page-programs span.fa-stack {
-  font-size: 5em;
+  font-size: 2em;
   width: 100%;
+}
+#page-programs span.fa-stack .fa-circle {
+  display: none;
+}
+@media only screen and (min-width: 40.063em) {
+  #page-programs span.fa-stack .fa-circle {
+    display: block;
+  }
 }
 @media only screen and (min-width: 40.063em) {
   #page-programs span.fa-stack {
@@ -8452,9 +8468,22 @@ h1 {
 }
 #page-programs h2 {
   font-family: 'League Gothic';
-  text-align: center;
-  font-size: 2.5em;
+  font-size: 2em;
   letter-spacing: .05em;
+  float: left;
+  margin-left: 10px;
+}
+@media only screen and (max-width: 40em) {
+  #page-programs h2 {
+    padding: 0px;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  #page-programs h2 {
+    float: none;
+    text-align: center;
+    margin-left: 0px;
+  }
 }
 #page-programs h5 {
   font-family: 'Droid Sans';
@@ -8470,11 +8499,15 @@ h1 {
   }
 }
 #page-programs p {
+  margin: 0 0;
   padding: 10px;
   text-align: justify;
-  background-color: rgba(34, 34, 34, 0.75);
   font-family: 'Droid Sans';
-  margin: 0 0;
+}
+@media only screen and (min-width: 40.063em) {
+  #page-programs p {
+    background-color: rgba(34, 34, 34, 0.75);
+  }
 }
 
 #page-about {
@@ -8482,9 +8515,6 @@ h1 {
 }
 #page-about h1 {
   color: #222222;
-}
-#page-about p {
-  padding: 1em;
 }
 
 .full-width {

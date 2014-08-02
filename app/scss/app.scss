@@ -50,6 +50,11 @@
 //-------------M I X I N S---------------
 //---------------------------------------
 @mixin media($type) {
+  @if $type == mobile {
+    @media only screen and (max-width: 40em) {
+      @content;
+    }
+  }
   @if $type == tablet {
     @media only screen and (min-width: 40.063em) {
       @content;
@@ -114,17 +119,29 @@ h1 {
 }
 
 #page-programs {
-  @include background-image('/images/programs.jpg');
+  @include background-image('/images/programs-alt.jpg');
   
   ul {
     margin-bottom: 1em;
   }
   .blockgrid-li {
     padding-bottom: 0px;
+    margin-bottom: 10px;
+    background-color: rgba(#222222, 0.75);
+    @include media(tablet) {
+      background-color: transparent;
+      margin-bottom: 0px;
+    }
   }
   span.fa-stack {
-    font-size: 5em;
+    font-size: 2em;
     width: 100%;
+    .fa-circle{
+      display: none;
+      @include media(tablet) {
+        display: block;
+      }
+    }
     @include media(tablet) {
       font-size: 6em;
     }
@@ -134,9 +151,18 @@ h1 {
   }
   h2 {
     font-family: 'League Gothic';
-    text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
     letter-spacing: .05em;
+    float: left;
+    margin-left: 10px;
+    @include media(mobile) {
+        padding: 0px;
+    }
+    @include media(tablet) {
+      float: none;
+      text-align: center;
+      margin-left: 0px;
+    }
   }
   h5 {
     font-family: 'Droid Sans';
@@ -150,12 +176,13 @@ h1 {
     }
   }
   p {
-    @include accordian-content();
+    margin: 0 0;
     padding: 10px;
     text-align: justify; 
-    background-color: rgba(#222222, 0.75);
     font-family: 'Droid Sans';
-    margin: 0 0;
+    @include media(tablet) {
+      background-color: rgba(#222222, 0.75);
+    }
   }
 }
 
@@ -166,7 +193,7 @@ h1 {
     color: #222222;
   }
   p {
-    padding: 1em;
+    //padding: 1em;
   }
 }
 
