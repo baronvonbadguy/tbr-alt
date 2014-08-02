@@ -5,8 +5,7 @@ html(class="no-js", lang="en")
 		.row.full-width
 			#page-splash.small-12.columns
 				#splash-title-container
-					#splash-title 
-						h1 TROY BIKE RESCUE
+					#splash-title TROY BIKE RESCUE
 					#splash-donate-button
 						form(action='https://www.paypal.com/cgi-bin/webscr', method='post')
 							input(name='cmd', value='_s-xclick', type='hidden')
@@ -16,54 +15,64 @@ html(class="no-js", lang="en")
 							img(src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif', height='1', width='1')
 							br
 		.row.full-width
-			#page-members.small-12.columns
+			#page-about.small-12.columns
 				.row
-					.small-3.columns
-						.member-picture
-						.member-info
-							h5 name
-							h5 position
+					h1 LEARN ABOUT US
+				.row
+					p.
+						Troy Bike Rescue is a collective of cycling enthusiasts committed to removing 
+						bikes from the waste stream and getting them back on the streets.  We help to 
+						build bicycle community in the capital region through hands-on education.  We 
+						accept donations of any bikes, parts, or tools. We are supported entirely by 
+						donations of time and money from individual patrons like you.  Thank YOU!  
+						We always seek more people willing to give their time and energy in support of our goals. 			
 		.row.full-width
 			#page-programs.small-12.columns
 				.row
 					h1 COME HANG OUT!
 				.row
-					.small-12.medium-6.large-3.columns
-						span.fa-stack
-							i.fa.fa-circle.fa-stack-2x
-							i.fa.fa-graduation-cap.fa-stack-1x.fa-inverse
-						h2 learn &amp; earn
-						p.
-							Youth and adults can obtain a bike by putting in 6 Learn &amp; Earn 
-							hours working on Adoption Bikes and other TBR projects, which can be 
-							aquired during open shop hours and youth hours.
-					.small-12.medium-6.large-3.columns
-						span.fa-stack
-							i.fa.fa-circle.fa-stack-2x
-							i.fa.fa-unlock-alt.fa-stack-1x.fa-inverse
-						h2 open shop
-						h4 (Mon / Wed 5pm to 8pm)
-						p.
-							Self-Service Workshop with volunteer staff; 
-							come and volunteer, adopt a bike, or Learn &amp; Earn!
-					.small-12.medium-6.large-3.columns
-						span.fa-stack
-							i.fa.fa-circle.fa-stack-2x
-							i.fa.fa-child.fa-stack-1x.fa-inverse
-						h2 youth shop
-						h4 (Tues. 3pm to 6pm)
-						p.
-							Specific Hours for youth ages 10-15; 
-							Earn-A-Bike for volunteer hours; must have signed permission form from parents.  
-							The first Tuesday of every month is Youthshop Ride Club.
-					.small-12.medium-6.large-3.columns
-						span.fa-stack
-							i.fa.fa-circle.fa-stack-2x
-							i.fa.fa-female.fa-stack-1x.fa-inverse
-						h2 fem shop
-						h4 (Thursday 5pm to 8pm)
-						p.
-							Self-service workshop run by and dedicated to empowering, 
-							Women, Trans, Fem, Queer and anyone for whom gender has been a barrier in learning bike mechanics.
-							
+					.small-12.columns
+						ul.small-block-grid-1.medium-block-grid-2.large-block-grid-4(data-equalizer)
+							li.blockgrid-li
+								.program(data-equalizer-watch)
+									span.fa-stack
+										i.fa.fa-circle.fa-stack-2x
+										i.fa.fa-graduation-cap.fa-stack-1x.fa-inverse
+									h2 LEARN &amp; EARN
+									h5.spacer= 'spacer'
+									p.
+										Youth and adults can obtain a bike by putting in 6 Learn &amp; Earn 
+										hours working on Adoption Bikes and other TBR projects, which can be 
+										aquired during open shop hours and youth hours.
+							li.blockgrid-li
+								.program(data-equalizer-watch)
+									span.fa-stack
+										i.fa.fa-circle.fa-stack-2x
+										i.fa.fa-unlock-alt.fa-stack-1x.fa-inverse
+									h2 OPEN SHOP
+									h5 (Mon/Wed 5pm to 8pm)
+									p.
+										Self-Service Workshop with volunteer staff; 
+										come and volunteer, adopt a bike, or Learn &amp; Earn!
+							li.blockgrid-li
+								.program(data-equalizer-watch)
+									span.fa-stack
+										i.fa.fa-circle.fa-stack-2x
+										i.fa.fa-child.fa-stack-1x.fa-inverse
+									h2 YOUTH SHOP
+									h5 (Tues. 3pm to 6pm)
+									p.
+										Specific Hours for youth ages 10-15; 
+										Earn-A-Bike for volunteer hours; must have signed permission form from parents.  
+										The first Tuesday of every month is Youthshop Ride Club.
+							li.blockgrid-li
+								.program(data-equalizer-watch)
+									span.fa-stack
+										i.fa.fa-circle.fa-stack-2x
+										i.fa.fa-female.fa-stack-1x.fa-inverse
+									h2 FEM SHOP
+									h5 (Thur. 5pm to 8pm)
+									p.
+										Self-service workshop run by and dedicated to empowering, 
+										Women, Trans, Fem, Queer and anyone for whom gender has been a barrier in learning bike mechanics.
 		include footer

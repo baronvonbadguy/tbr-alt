@@ -50,18 +50,13 @@
 //-------------M I X I N S---------------
 //---------------------------------------
 @mixin media($type) {
-  @if $type == desktop {
-    @media only screen and (min-width: 1025px) {
-      @content;
-    }
-  }
   @if $type == tablet {
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 40.063em) {
       @content;
     }
   }
-  @else if $type == mobile {
-    @media only screen and (max-width: 640px) {
+  @if $type == desktop {
+    @media only screen and (min-width: 64.063em) {
       @content;
     }
   }
@@ -71,7 +66,7 @@
   background-image: url($url);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center center; 
+  background-position: top center; 
   background-size: cover;
 }
 
@@ -80,12 +75,22 @@ html {
   body {
     background: #222222;
     padding: 0 0;
+    font-family: 'Droid Sans';
     & > .row {
       margin: 0 0;
     }
   }
 }
-
+h1 {
+  font-family: 'League Gothic';
+  font-size: 4em;
+  letter-spacing: 0.05em;
+  color: ivory;
+  text-align: center;
+  @include media(tablet) {
+    letter-spacing: 0.1em;
+  }
+}
 #page-splash {
   display: flex;
   flex-direction: column;
@@ -94,8 +99,9 @@ html {
   height: 500px;
   padding: 0 0;
   @include background-image('/images/splash.jpg');
-  #splash-title h1{
+  #splash-title{
     font-family: 'League Gothic';
+    padding: 5px;
     text-align: center;
     color: ivory;
     font-size: 7em;
@@ -109,43 +115,59 @@ html {
 
 #page-programs {
   @include background-image('/images/programs.jpg');
-  overflow-y: scroll;
-  & > .row > h1 {
-    font-family: 'League Gothic';
-    font-size: 4em;
-    letter-spacing: .1em;
-    margin-top: .4em;
-    color: ivory;
-    text-align: center;
+  
+  ul {
+    margin-bottom: 1em;
+  }
+  .blockgrid-li {
+    padding-bottom: 0px;
   }
   span.fa-stack {
-    font-size: 7em;
+    font-size: 5em;
     width: 100%;
-    @include media(mobile) {
-      font-size: 5em;
+    @include media(tablet) {
+      font-size: 6em;
     }
   }
-  p, h2, h4{
-    font-family: 'Droid Sans';
+  p, h2, h5{
     color: ivory; 
   }
   h2 {
-    color: ivory;
+    font-family: 'League Gothic';
     text-align: center;
+    font-size: 2.5em;
+    letter-spacing: .05em;
   }
-  h4 {
+  h5 {
+    font-family: 'Droid Sans';
     text-align: center;
+    &.spacer {
+      display: none;
+      visibility: hidden;
+      @include media(tablet) {
+        display: block;
+      }
+    }
   }
   p {
+    @include accordian-content();
     padding: 10px;
     text-align: justify; 
     background-color: rgba(#222222, 0.75);
+    font-family: 'Droid Sans';
+    margin: 0 0;
   }
 }
 
-#page-members {
+#page-about {
   background-color: ivory;
-  height: 500px;
+
+  h1 {
+    color: #222222;
+  }
+  p {
+    padding: 1em;
+  }
 }
 
 .full-width {
