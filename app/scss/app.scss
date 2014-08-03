@@ -121,49 +121,52 @@ h1 {
 #page-programs {
   @include background-image('/images/programs-alt.jpg');
   
+  //program groups container
   ul {
     margin-bottom: 1em;
   }
+
+  //program groups
   .blockgrid-li {
-    padding-bottom: 0px;
+    padding:0;
     margin-bottom: 5px;
     background-color: rgba(#222222, 0.75);
     @include media(tablet) {
       background-color: transparent;
-      margin-bottom: 0px;
     }
     @include media(mobile) {
-      padding:0;
       .columns {
         padding:0;
         margin:0;
       }
-
     }
   }
-  span.fa-stack {
-    font-size: 2em;
-    .fa-circle {
-      display: none;
-      @include media(tablet) {
-        display: block;
-      }
-    }
-    @include media(tablet) {
+
+  //icon styling
+    i {
       width: 100%;
       text-align: center;
-      font-size: 4em;
+      font-size: 2em;
+      color: ivory;
+      @include media(mobile) {
+        height: 1em;
+        margin-top: .35em;
+      }
+      @include media(tablet) {
+        font-size: 4em;
+      }
+      @include media(desktop) {
+        font-size: 6em;
+      }
     }
-    @include media(desktop) {
-      font-size: 6em;
-    }
-  }
+
+  //text styling
   p, h2, h5{
     color: ivory; 
   }
   h2 {
     font-family: 'League Gothic';
-    font-size: 2.3em;
+    font-size: 2em;
     letter-spacing: .05em;
     float: left;
     margin-left: 10px;
@@ -182,7 +185,8 @@ h1 {
     font-family: 'Droid Sans';
     text-align: center;
     @include media(mobile) {
-
+      margin-bottom: 0px;
+      margin-top: 15px;
     }
     &.spacer {
       display: none;

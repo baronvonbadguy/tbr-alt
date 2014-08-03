@@ -8436,45 +8436,40 @@ h1 {
   margin-bottom: 1em;
 }
 #page-programs .blockgrid-li {
-  padding-bottom: 0px;
+  padding: 0;
   margin-bottom: 5px;
   background-color: rgba(34, 34, 34, 0.75);
 }
 @media only screen and (min-width: 40.063em) {
   #page-programs .blockgrid-li {
     background-color: transparent;
-    margin-bottom: 0px;
   }
 }
 @media only screen and (max-width: 40em) {
-  #page-programs .blockgrid-li {
-    padding: 0;
-  }
   #page-programs .blockgrid-li .columns {
     padding: 0;
     margin: 0;
   }
 }
-#page-programs span.fa-stack {
+#page-programs i {
+  width: 100%;
+  text-align: center;
   font-size: 2em;
+  color: ivory;
 }
-#page-programs span.fa-stack .fa-circle {
-  display: none;
-}
-@media only screen and (min-width: 40.063em) {
-  #page-programs span.fa-stack .fa-circle {
-    display: block;
+@media only screen and (max-width: 40em) {
+  #page-programs i {
+    height: 1em;
+    margin-top: .35em;
   }
 }
 @media only screen and (min-width: 40.063em) {
-  #page-programs span.fa-stack {
-    width: 100%;
-    text-align: center;
+  #page-programs i {
     font-size: 4em;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  #page-programs span.fa-stack {
+  #page-programs i {
     font-size: 6em;
   }
 }
@@ -8483,7 +8478,7 @@ h1 {
 }
 #page-programs h2 {
   font-family: 'League Gothic';
-  font-size: 2.3em;
+  font-size: 2em;
   letter-spacing: .05em;
   float: left;
   margin-left: 10px;
@@ -8505,6 +8500,12 @@ h1 {
 #page-programs h5 {
   font-family: 'Droid Sans';
   text-align: center;
+}
+@media only screen and (max-width: 40em) {
+  #page-programs h5 {
+    margin-bottom: 0px;
+    margin-top: 15px;
+  }
 }
 #page-programs h5.spacer {
   display: none;
