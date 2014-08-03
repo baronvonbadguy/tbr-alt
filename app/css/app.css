@@ -8364,214 +8364,6 @@ th.hide-for-touch {
   font-style: normal;
 }
 
-/* Slider */
-.slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -ms-touch-action: none;
-  touch-action: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.slick-list {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-.slick-list:focus {
-  outline: none;
-}
-.slick-loading .slick-list {
-  background: white url('/images/ajax-loader.gif') center center no-repeat;
-}
-.slick-list.dragging {
-  cursor: pointer;
-  cursor: hand;
-}
-
-.slick-slider .slick-list,
-.slick-track,
-.slick-slide,
-.slick-slide img {
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: block;
-  zoom: 1;
-}
-.slick-track:before, .slick-track:after {
-  content: "";
-  display: table;
-}
-.slick-track:after {
-  clear: both;
-}
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-
-.slick-slide {
-  float: left;
-  height: 100%;
-  min-height: 1px;
-  display: none;
-}
-.slick-slide img {
-  display: block;
-}
-.slick-slide.slick-loading img {
-  display: none;
-}
-.slick-slide.dragging img {
-  pointer-events: none;
-}
-.slick-initialized .slick-slide {
-  display: block;
-}
-.slick-loading .slick-slide {
-  visibility: hidden;
-}
-.slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent;
-}
-
-/* Icons */
-@font-face {
-  font-family: "slick";
-  src: imag-url("slick.eot");
-  src: imag-url("slick.eot?#iefix") format("embedded-opentype"), imag-url("slick.woff") format("woff"), imag-url("slick.ttf") format("truetype"), imag-url("slick.svg#slick") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Arrows */
-.slick-prev,
-.slick-next {
-  position: absolute;
-  display: block;
-  height: 20px;
-  width: 20px;
-  line-height: 0;
-  font-size: 0;
-  cursor: pointer;
-  background: transparent;
-  color: transparent;
-  top: 50%;
-  margin-top: -10px;
-  padding: 0;
-  border: none;
-  outline: none;
-}
-.slick-prev:focus,
-.slick-next:focus {
-  outline: none;
-}
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before {
-  opacity: 0.25;
-}
-
-.slick-prev:before, .slick-next:before {
-  font-family: "slick";
-  font-size: 20px;
-  line-height: 1;
-  color: white;
-  opacity: 0.85;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-prev {
-  left: -25px;
-}
-.slick-prev:before {
-  content: "\2190";
-}
-
-.slick-next {
-  right: -25px;
-}
-.slick-next:before {
-  content: "\2192";
-}
-
-/* Dots */
-.slick-slider {
-  margin-bottom: 30px;
-}
-
-.slick-dots {
-  position: absolute;
-  bottom: -45px;
-  list-style: none;
-  display: block;
-  text-align: center;
-  padding: 0px;
-  width: 100%;
-}
-.slick-dots li {
-  position: relative;
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  margin: 0px 5px;
-  padding: 0px;
-  cursor: pointer;
-}
-.slick-dots li button {
-  border: 0;
-  background: transparent;
-  display: block;
-  height: 20px;
-  width: 20px;
-  outline: 0;
-  line-height: 0;
-  font-size: 0;
-  color: transparent;
-  padding: 5px;
-  cursor: pointer;
-}
-.slick-dots li button:focus {
-  outline: 0;
-}
-.slick-dots li button:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "\2022";
-  width: 20px;
-  height: 20px;
-  font-family: "slick";
-  font-size: 6px;
-  line-height: 20px;
-  text-align: center;
-  color: black;
-  opacity: 0.25;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.slick-dots li.slick-active button:before {
-  opacity: 0.75;
-}
-
 html {
   padding: 0 0;
 }
@@ -8753,7 +8545,7 @@ h1 {
 }
 #page-programs h2 {
   font-family: 'League Gothic';
-  font-size: 2em;
+  font-size: 1.9em;
   letter-spacing: .05em;
   float: left;
   margin-left: 10px;
@@ -8819,6 +8611,39 @@ h1 {
   #page-about p {
     text-align: justify;
   }
+}
+
+#page-gallery h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+#page-gallery #gallery {
+  line-height: 0;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 0px;
+     -moz-column-gap: 0px;
+          column-gap: 0px;
+}
+@media only screen and (min-width: 40.063em) {
+  #page-gallery #gallery {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  #page-gallery #gallery {
+    -webkit-column-count: 4;
+       -moz-column-count: 4;
+            column-count: 4;
+  }
+}
+#page-gallery #gallery img {
+  width: 100% !important;
+  height: auto !important;
 }
 
 .full-width {
