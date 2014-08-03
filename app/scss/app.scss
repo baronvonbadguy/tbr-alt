@@ -125,7 +125,7 @@ h1 {
   height: 500px;
   padding: 0 0;
   @include background-image('/images/splash.jpg');
-  #splash-title{
+  #splash-title {
     font-family: 'League Gothic';
     padding: 5px;
     text-align: center;
@@ -143,12 +143,14 @@ h1 {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    & div {
+    & a {
       height: 40px;
       width: 40px;
       margin: 15px;
-      border-bottom: 4px;
-      border-color: rgba(113, 18, 32, 0.6);
+      div {
+        height: 100%;
+        width: 100%;
+      }
     }
 
     #splash-social-media--facebook {
@@ -284,6 +286,7 @@ h1 {
     position: absolute;
     width: 100%;
     text-align: center;
+    text-shadow: 0px 4px 0px rgba(#222222, 0.75);
   }
   #gallery {
     line-height: 0;

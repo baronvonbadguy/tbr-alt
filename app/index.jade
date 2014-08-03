@@ -91,12 +91,10 @@ html(class="no-js", lang="en")
 											Women, Trans, Fem, Queer and anyone for whom gender has been a barrier in learning bike mechanics.
 		.row.full-width
 			#page-gallery
-				.row
-					h1 CHECK US OUT
-				.row.full-width
-					section#gallery
-						- var i = 1
-						while i < 13 
-							img(src=('/images/gallery/' + i++ + '.jpg') alt='gallery-image')
+				h1 CHECK US OUT
+				section#gallery
+					- var i = 1
+					while i < 13 
+						img(src=('/images/gallery/' + i++ + '.jpg') alt='gallery-image')
 
 		include footer

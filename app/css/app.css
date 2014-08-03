@@ -8436,12 +8436,14 @@ h1 {
           justify-content: center;
   margin: 0 auto;
 }
-#page-splash #splash-social-media div {
+#page-splash #splash-social-media a {
   height: 40px;
   width: 40px;
   margin: 15px;
-  border-bottom: 4px;
-  border-color: rgba(113, 18, 32, 0.6);
+}
+#page-splash #splash-social-media a div {
+  height: 100%;
+  width: 100%;
 }
 #page-splash #splash-social-media #splash-social-media--facebook {
   background: url("/images/social-media-icons.svg");
@@ -8617,6 +8619,7 @@ h1 {
   position: absolute;
   width: 100%;
   text-align: center;
+  text-shadow: 0px 4px 0px rgba(34, 34, 34, 0.75);
 }
 #page-gallery #gallery {
   line-height: 0;
