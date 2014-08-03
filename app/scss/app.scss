@@ -45,7 +45,13 @@
   "foundation/components/visibility";
 
 @import "appstyles";
-@import url(http://fonts.googleapis.com/css?family=Oswald:300|Roboto|Droid+Sans);
+@import "../slick/slick.scss";
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif|Droid+Sans);
+//---------------------------------------
+//----------V A R I A B L E S------------
+//---------------------------------------
+$social-media-icons: "/images/social-media-icons.svg";
+
 //---------------------------------------
 //-------------M I X I N S---------------
 //---------------------------------------
@@ -73,6 +79,22 @@
   background-attachment: fixed;
   background-position: top center; 
   background-size: cover;
+}
+
+@mixin custom-icon($url) {
+  width: 100%;
+  height: 2em;
+  margin-left: auto;
+  margin-top: 0.7em;
+  content: url($url);
+  @include media(tablet) {
+    height: 4em;
+    margin-top: 0;
+  }
+  @include media(desktop) {
+    height: 6em;
+    margin-bottom: 0.45em;
+  }
 }
 
 html {
@@ -116,6 +138,32 @@ h1 {
     width: 200px;
     margin: 0 auto;
   }
+
+  #splash-social-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    & div {
+      height: 40px;
+      width: 40px;
+      margin: 15px;
+      border-bottom: 4px;
+      border-color: rgba(113, 18, 32, 0.6);
+    }
+
+    #splash-social-media--facebook {
+      background: url($social-media-icons);
+    }
+
+    #splash-social-media--twitter {
+      background: url($social-media-icons) -40px 0;
+    }
+
+    #splash-social-media--instagram {
+      background: url($social-media-icons) -80px 0;
+    }
+  }
 }
 
 #page-programs {
@@ -128,7 +176,7 @@ h1 {
 
   //program groups
   .blockgrid-li {
-    padding:0;
+    padding: 0;
     margin-bottom: 5px;
     background-color: rgba(#222222, 0.75);
     @include media(tablet) {
@@ -136,21 +184,22 @@ h1 {
     }
     @include media(mobile) {
       .columns {
-        padding:0;
-        margin:0;
+        padding: 0;
+        margin: 0;
       }
     }
   }
 
   //icon styling
-    i {
+    i.fa {
       width: 100%;
       text-align: center;
       font-size: 2em;
       color: ivory;
+      overflow: hidden;
       @include media(mobile) {
         height: 1em;
-        margin-top: .35em;
+        margin-top: 0.35em;
       }
       @include media(tablet) {
         font-size: 4em;
@@ -158,6 +207,13 @@ h1 {
       @include media(desktop) {
         font-size: 6em;
       }
+    }
+    .icon-trans {
+      @include custom-icon('/images/trans-icon.svg');
+    }
+    .icon-brain {
+      //ICON USED FROM FLATICON.COM
+      @include custom-icon('/images/brain-icon.svg');
     }
 
   //text styling
@@ -217,7 +273,10 @@ h1 {
     color: #222222;
   }
   p {
-    //padding: 1em;
+    font-size: 1.5em;
+    @include media(mobile) {
+      text-align: justify;
+    }
   }
 }
 

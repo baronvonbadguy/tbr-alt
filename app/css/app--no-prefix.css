@@ -4,7 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(http://fonts.googleapis.com/css?family=Oswald:300|Roboto|Droid+Sans);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif|Droid+Sans);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -8384,6 +8384,216 @@ th.hide-for-touch {
   font-style: normal;
 }
 
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-loading .slick-list {
+  background: white url('/images/ajax-loader.gif') center center no-repeat;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-list,
+.slick-track,
+.slick-slide,
+.slick-slide img {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  zoom: 1;
+}
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: imag-url("slick.eot");
+  src: imag-url("slick.eot?#iefix") format("embedded-opentype"), imag-url("slick.woff") format("woff"), imag-url("slick.ttf") format("truetype"), imag-url("slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0;
+  font-size: 0;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  margin-top: -10px;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+.slick-prev:focus,
+.slick-next:focus {
+  outline: none;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.85;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -25px;
+}
+.slick-prev:before {
+  content: "\2190";
+}
+
+.slick-next {
+  right: -25px;
+}
+.slick-next:before {
+  content: "\2192";
+}
+
+/* Dots */
+.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -45px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0px;
+  width: 100%;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0px 5px;
+  padding: 0px;
+  cursor: pointer;
+}
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: 0;
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+.slick-dots li button:focus {
+  outline: 0;
+}
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "\2022";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+}
+
 html {
   padding: 0 0;
 }
@@ -8434,6 +8644,28 @@ h1 {
   width: 200px;
   margin: 0 auto;
 }
+#page-splash #splash-social-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+#page-splash #splash-social-media div {
+  height: 40px;
+  width: 40px;
+  margin: 15px;
+  border-bottom: 4px;
+  border-color: rgba(113, 18, 32, 0.6);
+}
+#page-splash #splash-social-media #splash-social-media--facebook {
+  background: url("/images/social-media-icons.svg");
+}
+#page-splash #splash-social-media #splash-social-media--twitter {
+  background: url("/images/social-media-icons.svg") -40px 0;
+}
+#page-splash #splash-social-media #splash-social-media--instagram {
+  background: url("/images/social-media-icons.svg") -80px 0;
+}
 
 #page-programs {
   background-image: url("/images/programs-alt.jpg");
@@ -8461,26 +8693,65 @@ h1 {
     margin: 0;
   }
 }
-#page-programs i {
+#page-programs i.fa {
   width: 100%;
   text-align: center;
   font-size: 2em;
   color: ivory;
+  overflow: hidden;
 }
 @media only screen and (max-width: 40em) {
-  #page-programs i {
+  #page-programs i.fa {
     height: 1em;
-    margin-top: .35em;
+    margin-top: 0.35em;
   }
 }
 @media only screen and (min-width: 40.063em) {
-  #page-programs i {
+  #page-programs i.fa {
     font-size: 4em;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  #page-programs i {
+  #page-programs i.fa {
     font-size: 6em;
+  }
+}
+#page-programs .icon-trans {
+  width: 100%;
+  height: 2em;
+  margin-left: auto;
+  margin-top: 0.7em;
+  content: url("/images/trans-icon.svg");
+}
+@media only screen and (min-width: 40.063em) {
+  #page-programs .icon-trans {
+    height: 4em;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  #page-programs .icon-trans {
+    height: 6em;
+    margin-bottom: 0.45em;
+  }
+}
+#page-programs .icon-brain {
+  width: 100%;
+  height: 2em;
+  margin-left: auto;
+  margin-top: 0.7em;
+  content: url("/images/brain-icon.svg");
+}
+@media only screen and (min-width: 40.063em) {
+  #page-programs .icon-brain {
+    height: 4em;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  #page-programs .icon-brain {
+    height: 6em;
+    margin-bottom: 0.45em;
   }
 }
 #page-programs p, #page-programs h2, #page-programs h5 {
@@ -8546,6 +8817,14 @@ h1 {
 }
 #page-about h1 {
   color: #222222;
+}
+#page-about p {
+  font-size: 1.5em;
+}
+@media only screen and (max-width: 40em) {
+  #page-about p {
+    text-align: justify;
+  }
 }
 
 .full-width {
