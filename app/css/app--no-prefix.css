@@ -8398,14 +8398,38 @@ html body > .row {
 
 h1 {
   font-family: 'League Gothic';
-  font-size: 4em;
+  font-size: 3.3em;
   letter-spacing: 0.05em;
   color: ivory;
   text-align: center;
 }
+@media only screen and (max-width: 300px) {
+  h1 {
+    font-size: 16vmin;
+  }
+}
 @media only screen and (min-width: 40.063em) {
   h1 {
     letter-spacing: 0.1em;
+  }
+}
+
+h2 {
+  font-family: 'League Gothic';
+  font-size: 1.8em;
+  letter-spacing: .05em;
+}
+@media only screen and (max-width: 40em) {
+  h2 {
+    margin-top: .3em;
+    padding: 0px;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  h2 {
+    float: none;
+    text-align: center;
+    margin: 0px;
   }
 }
 
@@ -8469,6 +8493,12 @@ h1 {
 #page-programs ul {
   margin-bottom: 1em;
 }
+@media only screen and (max-width: 40em) {
+  #page-programs .columns {
+    padding: 0;
+    margin: 0;
+  }
+}
 #page-programs .blockgrid-li {
   padding: 0;
   margin-bottom: 5px;
@@ -8477,12 +8507,6 @@ h1 {
 @media only screen and (min-width: 40.063em) {
   #page-programs .blockgrid-li {
     background-color: transparent;
-  }
-}
-@media only screen and (max-width: 40em) {
-  #page-programs .blockgrid-li .columns {
-    padding: 0;
-    margin: 0;
   }
 }
 #page-programs i.fa {
@@ -8550,25 +8574,8 @@ h1 {
   color: ivory;
 }
 #page-programs h2 {
-  font-family: 'League Gothic';
-  font-size: 1.9em;
-  letter-spacing: .05em;
-  float: left;
+  clear: both;
   margin-left: 10px;
-  height: 1em;
-}
-@media only screen and (max-width: 40em) {
-  #page-programs h2 {
-    margin-top: .2em;
-    padding: 0px;
-  }
-}
-@media only screen and (min-width: 40.063em) {
-  #page-programs h2 {
-    float: none;
-    text-align: center;
-    margin-left: 0px;
-  }
 }
 #page-programs h5 {
   font-family: 'Droid Sans';
@@ -8577,7 +8584,16 @@ h1 {
 @media only screen and (max-width: 40em) {
   #page-programs h5 {
     margin-bottom: 0px;
-    margin-top: 15px;
+    margin-top: 1em;
+    font-size: 1em;
+  }
+  #page-programs h5.margin-shift {
+    margin-top: 0.5em;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  #page-programs h5 {
+    clear: both;
   }
 }
 #page-programs h5.spacer {
