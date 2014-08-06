@@ -5453,86 +5453,75 @@ h2 {
   }
 }
 
-/*
+#page-gallery {
+  /*
 Stretchy Sprites by tobyj.net
 Feel free to copy and reuse as you like
 */
-/*Set the max-width to the width of your individual sprites:*/
-.stretchy {
+  /*Set the max-width to the width of your individual sprites:*/
+  /*you could also set this to a pixel size, for example 320px, to limit the maximum*/
+  /*END stretchy sprites by tobyj.net*/
+}
+#page-gallery .stretchy {
   display: block;
   float: left;
   position: relative;
   overflow: hidden;
   max-width: 650px;
 }
-
-.stretchy .spacer {
+#page-gallery .stretchy .spacer {
   width: 100%;
   height: auto;
 }
-
-.stretchy .sprite {
+#page-gallery .stretchy .sprite {
   position: absolute;
   top: 0;
   left: 0;
   max-width: none;
   max-height: 100%;
 }
-
-.stretchy .sprite.s2 {
+#page-gallery .stretchy .sprite.s2 {
+  left: -100%;
+}
+#page-gallery .stretchy .sprite.s3 {
   left: -200%;
 }
-
-.stretchy .sprite.s3 {
+#page-gallery .stretchy .sprite.s4 {
   left: -300%;
 }
-
-.stretchy .sprite.s4 {
+#page-gallery .stretchy .sprite.s5 {
   left: -400%;
 }
-
-.stretchy .sprite.s5 {
+#page-gallery .stretchy .sprite.s6 {
   left: -500%;
 }
-
-.stretchy .sprite.s6 {
+#page-gallery .stretchy .sprite.s7 {
   left: -600%;
 }
-
-.stretchy .sprite.s7 {
+#page-gallery .stretchy .sprite.s8 {
   left: -700%;
 }
-
-.stretchy .sprite.s8 {
+#page-gallery .stretchy .sprite.s9 {
   left: -800%;
 }
-
-.stretchy .sprite.s9 {
+#page-gallery .stretchy .sprite.s10 {
   left: -900%;
 }
-
-.stretchy .sprite.s10 {
+#page-gallery .stretchy .sprite.s11 {
   left: -1000%;
 }
-
-.stretchy .sprite.s11 {
+#page-gallery .stretchy .sprite.s12 {
   left: -1100%;
 }
-
-.stretchy .sprite.s12 {
+#page-gallery .stretchy .sprite.s13 {
   left: -1200%;
 }
-
-.stretchy.no-limit {
+#page-gallery .stretchy.no-limit {
   max-width: none;
 }
-
-/*you could also set this to a pixel size, for example 320px, to limit the maximum*/
-.stretchy.no-limit .sprite {
+#page-gallery .stretchy.no-limit .sprite {
   min-height: 100%;
 }
-
-/*END stretchy sprites by tobyj.net*/
 #page-gallery h1 {
   position: absolute;
   width: 100%;

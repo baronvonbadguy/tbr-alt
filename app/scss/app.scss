@@ -261,26 +261,25 @@ h2 {
     }
   }
 }
-/*
-Stretchy Sprites by tobyj.net
-Feel free to copy and reuse as you like
-*/
-//SQUARE ALL IMAGES IN PHOTOSHOP TO FIX
-/*Set the max-width to the width of your individual sprites:*/
-.stretchy {display:block; float:left; position:relative; overflow:hidden; max-width:650px;}
-.stretchy .spacer {width: 100%; height: auto;}
-.stretchy .sprite {position:absolute; top:0; left:0; max-width:none; max-height:100%;}
-@for $i from 2 through 12 {
-  .stretchy .sprite.s#{$i} {
-    left: percentage(-$i);
-  }
-}
-.stretchy.no-limit {max-width: none;} /*you could also set this to a pixel size, for example 320px, to limit the maximum*/
-.stretchy.no-limit .sprite {min-height: 100%;}
-
-/*END stretchy sprites by tobyj.net*/
 
 #page-gallery {
+    /*
+  Stretchy Sprites by tobyj.net
+  Feel free to copy and reuse as you like
+  */
+  /*Set the max-width to the width of your individual sprites:*/
+  .stretchy {display:block; float:left; position:relative; overflow:hidden; max-width:650px;}
+  .stretchy .spacer {width: 100%; height: auto;}
+  .stretchy .sprite {position:absolute; top:0; left:0; max-width:none; max-height:100%;}
+  @for $i from 1 through 12 {
+    .stretchy .sprite.s#{$i + 1} {
+      left: percentage(-$i);
+    }
+  }
+  .stretchy.no-limit {max-width: none;} /*you could also set this to a pixel size, for example 320px, to limit the maximum*/
+  .stretchy.no-limit .sprite {min-height: 100%;}
+
+  /*END stretchy sprites by tobyj.net*/
   h1 {
     position: absolute;
     width: 100%;
