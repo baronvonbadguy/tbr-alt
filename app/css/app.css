@@ -5539,7 +5539,7 @@ Feel free to copy and reuse as you like
   text-align: center;
   z-index: 2;
 }
-#page-gallery .columns {
+#page-gallery .gallery-block {
   padding: 0;
   margin: 0;
 }

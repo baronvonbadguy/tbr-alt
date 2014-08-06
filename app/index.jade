@@ -109,15 +109,15 @@ html(class="no-js", lang="en")
 				.row
 					h1 CHECK US OUT
 				.row.full-width
-						section#gallery
-							- var i = 1
-							while i < 13 
-								.small-6.medium-4-large-3.columns
-									.stretchy
-										img.spacer(src="/images/spacer.png")
-										if (i === 1)
-											img.sprite(src="/images/gallery-grid.jpg" alt="gallery sprite sheet")
-										else
-											img.sprite(class=("s" + i) src="/images/gallery-grid.jpg" alt="gallery sprite sheet")
-								- i++
+					ul.small-block-grid-2.medium-block-grid-3.large-block-grid-4(data-equalizer)
+						- var i = 1
+						while i < 13 
+							li.gallery-block.blockgrid-li
+								.stretchy(data-equalizer-watch)
+									img.spacer(src="/images/spacer.png")
+									if (i === 1)
+										img.sprite(src="/images/gallery-grid.jpg" alt="gallery sprite sheet")
+									else
+										img.sprite(class=("s" + i) src="/images/gallery-grid.jpg" alt="gallery sprite sheet")
+							- i++
 		include footer
