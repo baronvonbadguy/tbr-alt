@@ -77,6 +77,10 @@ module.exports = function(grunt) {
 
 		imagemin: {
 			target: {
+				options: {
+					optimizationLevel: 7,
+					progressive: true
+				},
 				files: [{
 					expand: true,
 					cwd: '<%= app %>/images/',
@@ -186,7 +190,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('compile-sass', ['sass']);
 	grunt.registerTask('bower-install', ['wiredep']);
 	
-	grunt.registerTask('default', ['compile-jade', 'compile-sass', 'bower-install', 'connect:app', 'watch']);
+	grunt.registerTask('default', ['compile-jade', 'compile-sass', 'connect:app', 'watch']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
 	
