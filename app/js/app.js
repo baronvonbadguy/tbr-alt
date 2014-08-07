@@ -27,3 +27,8 @@ var app = (function(document, $) {
 $(document).ready(function() {
 	
 });
+
+$( window ).load(function() {
+	$('img.sprite').data('src', '/images/gallery-grid.jpg');
+	$('img.spacer').data('src', '/images/spacer-small.png');
+});
