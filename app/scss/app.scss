@@ -276,7 +276,7 @@ h2 {
       left: percentage(-$i);
     }
   }
-  .stretchy.no-limit {max-width: none;} /*you could also set this to a pixel size, for example 320px, to limit the maximum*/
+  .stretchy.no-limit { max-width: none;} /*you could also set this to a pixel size, for example 320px, to limit the maximum*/
   .stretchy.no-limit .sprite {min-height: 100%;}
 
   /*END stretchy sprites by tobyj.net*/

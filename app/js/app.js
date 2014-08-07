@@ -25,10 +25,11 @@ var app = (function(document, $) {
 })();
 
 $(document).ready(function() {
-	
+	'use strict';
 });
 
 $( window ).load(function() {
-	$('img.sprite').data('src', '/images/gallery-grid.jpg');
-	$('img.spacer').data('src', '/images/spacer-small.png');
+	'use strict';
+	$('img.sprite').attr('src', '/images/gallery-grid.jpg');
+	$('img.spacer').attr('src', '/images/spacer.png');
 });
