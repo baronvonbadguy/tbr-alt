@@ -55,7 +55,9 @@ $social-media-icons: "/images/social-media-icons.svg";
   height: 2em;
   margin-left: auto;
   margin-top: 0.7em;
-  content: url($url);
+  background: url($url);
+  background-repeat: no-repeat;
+
   @include media(tablet) {
     height: 4em;
     margin-top: 0;
@@ -74,6 +76,9 @@ html {
     font-family: 'Droid Sans';
     & > .row {
       margin: 0 0;
+    }
+    & > svg {
+      display: none;
     }
   }
 }
@@ -179,21 +184,19 @@ h2 {
   }
 
   //icon styling
-    i.fa {
+    svg {
       width: 100%;
-      text-align: center;
-      font-size: 2em;
-      color: ivory;
+      height: 2em;
       overflow: hidden;
       @include media(mobile) {
-        height: 1em;
-        margin-top: 0.35em;
+        height: 2.5em;
+        margin-top: 0.4em;
       }
       @include media(tablet) {
-        font-size: 4em;
+        height: 4em;
       }
       @include media(desktop) {
-        font-size: 6em;
+        height: 6em;
       }
     }
     .icon-trans {
@@ -281,10 +284,17 @@ h2 {
 
   /*END stretchy sprites by tobyj.net*/
   h1 {
+    font-size: 4em;
     position: absolute;
     width: 100%;
     text-align: center;
     z-index: 2;
+    @include media(tablet) {
+      font-size: 5em;
+    }
+    @include media(desktop) {
+      font-size: 6em;
+    }
   }
   .gallery-block {
     padding: 0;
@@ -294,13 +304,11 @@ h2 {
 #page-adopt-a-bike {
   background-color: ivory;
   padding: 1em;
-  .icon-bicycle {
+  svg {
+    display: block;
     width: 10em;
     height: 8em;
     margin: 1em auto;
-    background: url('/images/bicycle-icon-alt.svg') no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
   }
   h1 {
     color: #222222;

@@ -5196,6 +5196,9 @@ html body {
 html body > .row {
   margin: 0 0;
 }
+html body > svg {
+  display: none;
+}
 
 h1 {
   font-family: 'League Gothic';
@@ -5327,27 +5330,25 @@ h2 {
     background-color: transparent;
   }
 }
-#page-programs i.fa {
+#page-programs svg {
   width: 100%;
-  text-align: center;
-  font-size: 2em;
-  color: ivory;
+  height: 2em;
   overflow: hidden;
 }
 @media only screen and (max-width: 40em) {
-  #page-programs i.fa {
-    height: 1em;
-    margin-top: 0.35em;
+  #page-programs svg {
+    height: 2.5em;
+    margin-top: 0.4em;
   }
 }
 @media only screen and (min-width: 40.063em) {
-  #page-programs i.fa {
-    font-size: 4em;
+  #page-programs svg {
+    height: 4em;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  #page-programs i.fa {
-    font-size: 6em;
+  #page-programs svg {
+    height: 6em;
   }
 }
 #page-programs .icon-trans {
@@ -5355,7 +5356,8 @@ h2 {
   height: 2em;
   margin-left: auto;
   margin-top: 0.7em;
-  content: url("/images/trans-icon.svg");
+  background: url("/images/trans-icon.svg");
+  background-repeat: no-repeat;
 }
 @media only screen and (min-width: 40.063em) {
   #page-programs .icon-trans {
@@ -5374,7 +5376,8 @@ h2 {
   height: 2em;
   margin-left: auto;
   margin-top: 0.7em;
-  content: url("/images/brain-icon.svg");
+  background: url("/images/brain-icon.svg");
+  background-repeat: no-repeat;
 }
 @media only screen and (min-width: 40.063em) {
   #page-programs .icon-brain {
@@ -5523,10 +5526,21 @@ Feel free to copy and reuse as you like
   min-height: 100%;
 }
 #page-gallery h1 {
+  font-size: 4em;
   position: absolute;
   width: 100%;
   text-align: center;
   z-index: 2;
+}
+@media only screen and (min-width: 40.063em) {
+  #page-gallery h1 {
+    font-size: 5em;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  #page-gallery h1 {
+    font-size: 6em;
+  }
 }
 #page-gallery .gallery-block {
   padding: 0;
@@ -5537,13 +5551,11 @@ Feel free to copy and reuse as you like
   background-color: ivory;
   padding: 1em;
 }
-#page-adopt-a-bike .icon-bicycle {
+#page-adopt-a-bike svg {
+  display: block;
   width: 10em;
   height: 8em;
   margin: 1em auto;
-  background: url("/images/bicycle-icon-alt.svg") no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
 }
 #page-adopt-a-bike h1 {
   color: #222222;
