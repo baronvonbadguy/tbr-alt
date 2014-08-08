@@ -269,15 +269,15 @@ h2 {
   */
   /*Set the max-width to the width of your individual sprites:*/
   .stretchy {display:block; float:left; position:relative; overflow:hidden; max-width:325px;}
-  .stretchy .spacer {width: 100%; height: auto;}
-  .stretchy .sprite {position:absolute; top:0; left:0; max-width:none; max-height:100%;}
+  .stretchy .spacer {width: 100.000%; height: auto;}
+  .stretchy .sprite {position:absolute; top:0; left:0; max-width:none; max-height:100.000%;}
   @for $i from 1 through 12 {
     .stretchy .sprite.s#{$i + 1} {
       left: percentage(-$i);
     }
   }
   .stretchy.no-limit { max-width: none;} /*you could also set this to a pixel size, for example 320px, to limit the maximum*/
-  .stretchy.no-limit .sprite {min-height: 100%;}
+  .stretchy.no-limit .sprite {min-height: 100.000%;}
 
   /*END stretchy sprites by tobyj.net*/
   h1 {

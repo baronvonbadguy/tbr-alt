@@ -5470,7 +5470,7 @@ Feel free to copy and reuse as you like
   max-width: 325px;
 }
 #page-gallery .stretchy .spacer {
-  width: 100%;
+  width: 100.000%;
   height: auto;
 }
 #page-gallery .stretchy .sprite {
@@ -5478,7 +5478,7 @@ Feel free to copy and reuse as you like
   top: 0;
   left: 0;
   max-width: none;
-  max-height: 100%;
+  max-height: 100.000%;
 }
 #page-gallery .stretchy .sprite.s2 {
   left: -100%;
@@ -5520,7 +5520,7 @@ Feel free to copy and reuse as you like
   max-width: none;
 }
 #page-gallery .stretchy.no-limit .sprite {
-  min-height: 100%;
+  min-height: 100.000%;
 }
 #page-gallery h1 {
   font-size: 4em;

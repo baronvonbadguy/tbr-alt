@@ -2,6 +2,7 @@ doctype html
 html(class="no-js", lang="en")
 	include header
 	mixin svg-sprite(pos, len, id)
+		//got my svg sprie sheet on a 72px base grid
 		-var viewbox = (72 * pos) + " 0 " + (72 * len) + " 72"
 		svg.svg-sprite(viewbox=viewbox)
 			use(xlink:href=("#" + id))
@@ -118,7 +119,7 @@ html(class="no-js", lang="en")
 						- var i = 1
 						while i < 13 
 							li.gallery-block.blockgrid-li
-								.stretchy.no-limit(data-equalizer-watch)
+								.stretchy(data-equalizer-watch)
 									img.spacer(src="/images/spacer-small.png")
 									if (i === 1)
 										img.sprite(src="/images/gallery-grid-small.jpg" alt="gallery sprite sheet")
