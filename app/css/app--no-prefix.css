@@ -5199,9 +5199,6 @@ html body {
 html body > .row {
   margin: 0 0;
 }
-html body > svg {
-  display: none;
-}
 
 h1 {
   font-family: 'League Gothic';

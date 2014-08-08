@@ -6,7 +6,8 @@ html(class="no-js", lang="en")
 		svg.svg-sprite(viewbox=viewbox)
 			use(xlink:href=("#" + id))
 	body
-		include images/svg-sprites.svg
+		#svg-wrapper(style="display: none;")
+			include images/svg-sprites.svg
 		.row.full-width
 			#page-splash.small-12.columns
 				#splash-title-container
