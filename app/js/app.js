@@ -8,6 +8,7 @@ var app = (function(document, $) {
 		},
 		_init = function() {
 			_userAgentInit();
+			$(document).foundation();
 		};
 
 	return {
@@ -25,7 +26,6 @@ var app = (function(document, $) {
 
 $(document).ready(function() {
 	'use strict';
-	$(document).foundation();
 });
 
 $( window ).load(function() {
