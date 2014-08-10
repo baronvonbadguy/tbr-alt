@@ -5259,10 +5259,6 @@ h2 {
   font-size: 7em;
   line-height: 1em;
 }
-#page-splash #splash-donate-button {
-  width: 200px;
-  margin: 0 auto;
-}
 #page-splash #splash-social-media {
   width: 100%;
   display: flex;
@@ -5278,14 +5274,9 @@ h2 {
   height: 100%;
   width: 100%;
 }
-#page-splash #splash-social-media #splash-social-media--facebook {
-  background: url("/images/social-media-icons.svg");
-}
-#page-splash #splash-social-media #splash-social-media--twitter {
-  background: url("/images/social-media-icons.svg") -40px 0;
-}
-#page-splash #splash-social-media #splash-social-media--instagram {
-  background: url("/images/social-media-icons.svg") -80px 0;
+#page-splash #splash-address h2 {
+  color: ivory;
+  text-align: center;
 }
 
 #page-programs {
@@ -5454,10 +5445,10 @@ Feel free to copy and reuse as you like
   float: left;
   position: relative;
   overflow: hidden;
-  max-width: 325px;
+  max-width: 325.00000001px;
 }
 #page-gallery .stretchy .spacer {
-  width: 100.000%;
+  width: 100.00000001%;
   height: auto;
 }
 #page-gallery .stretchy .sprite {
@@ -5465,7 +5456,7 @@ Feel free to copy and reuse as you like
   top: 0;
   left: 0;
   max-width: none;
-  max-height: 100.000%;
+  max-height: 100.00000001%;
 }
 #page-gallery .stretchy .sprite.s2 {
   left: -100%;
@@ -5504,10 +5495,10 @@ Feel free to copy and reuse as you like
   left: -1200%;
 }
 #page-gallery .stretchy.no-limit {
-  max-width: none;
+  max-width: 600.00000001px;
 }
 #page-gallery .stretchy.no-limit .sprite {
-  min-height: 100.000%;
+  min-height: 100.00000001%;
 }
 #page-gallery h1 {
   font-size: 4em;
@@ -5535,7 +5526,7 @@ Feel free to copy and reuse as you like
   background-color: ivory;
   padding: 1em;
 }
-#page-adopt-a-bike svg {
+#page-adopt-a-bike .svg-sprite {
   display: block;
   width: 10em;
   height: 8em;
@@ -5547,6 +5538,16 @@ Feel free to copy and reuse as you like
 }
 #page-adopt-a-bike p {
   padding: 10px;
+}
+#page-adopt-a-bike #donate-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#page-adopt-a-bike #donate-button a svg {
+  width: 216px;
+  height: 72px;
+  margin: 0 0;
 }
 
 .full-width {

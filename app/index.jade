@@ -13,14 +13,9 @@ html(class="no-js", lang="en")
 			#page-splash.small-12.columns
 				#splash-title-container
 					#splash-title TROY BIKE RESCUE
-					#splash-donate-button
-						form(action='https://www.paypal.com/cgi-bin/webscr', method='post')
-							input(name='cmd', value='_s-xclick', type='hidden')
-							input(name='hosted_button_id', value='7G4M6AM26W9T6', type='hidden')
-							br
-							input(src='/images/donate-button.svg', name='submit', alt='PayPal -The safer, easier way to pay online!', border='0', type='image')
-							img(src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif', height='1', width='1')
-							br
+					#splash-address 
+						h2 3280 6th Avenue Troy, NY 12180
+						h2 (518)-328-4827
 					#splash-social-media
 						a(href="http://www.facebook.com/troybikerescue")
 							+svg-sprite(2, 1, 'facebook')
@@ -28,6 +23,7 @@ html(class="no-js", lang="en")
 							+svg-sprite(3, 1, 'twitter')
 						a(href="http://instagram.com/troybikerescue")
 							+svg-sprite(4, 1, 'instagram')
+
 		.row.full-width
 			#page-about.small-12.columns
 				.row
@@ -102,7 +98,7 @@ html(class="no-js", lang="en")
 					+svg-sprite(8, 2, 'bicycle')
 					h1 ADOPT A BIKE
 				.row
-					.small-12.medium-10.large-8.medium-centered.columns
+					.small-12.medium-8.large-6.medium-centered.columns
 						p.
 							Refurbished bicycles are available for adoption for a donation on a sliding scale.
 							Bikes are grouped into several categories ($15-30, $30-60, $60-100, etc...), 
@@ -110,6 +106,10 @@ html(class="no-js", lang="en")
 							Adoption Bikes are available on a first come first serve basis,
 							and are sold "as is" (some may require some TLC).
 							All proceeds from bike adoption fees pay TBR overhead. Without your donations, we cannot do what we do.
+				.row
+					#donate-button
+						a(href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CBUZAKHL5EDKG&lc=US&item_name=Troy%20Bike%20Rescue&no_note=0&cn=Any%20comments%20for%20TBR%3f&no_shipping=1&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted")
+							+svg-sprite(5, 3, 'donate')
 		.row.full-width
 			#page-gallery.small-12.columns
 				.row

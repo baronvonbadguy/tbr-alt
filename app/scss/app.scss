@@ -123,11 +123,6 @@ h2 {
     font-size: 7em;
     line-height: 1em;
   }
-  #splash-donate-button {
-    width: 200px;
-    margin: 0 auto;
-  }
-
   #splash-social-media {
     width: 100%;
     display: flex;
@@ -142,17 +137,11 @@ h2 {
         width: 100%;
       }
     }
-
-    #splash-social-media--facebook {
-      background: url($social-media-icons);
-    }
-
-    #splash-social-media--twitter {
-      background: url($social-media-icons) -40px 0;
-    }
-
-    #splash-social-media--instagram {
-      background: url($social-media-icons) -80px 0;
+  }
+  #splash-address {
+    h2 {
+      color: ivory;
+      text-align: center;
     }
   }
 }
@@ -268,16 +257,16 @@ h2 {
   Feel free to copy and reuse as you like
   */
   /*Set the max-width to the width of your individual sprites:*/
-  .stretchy {display:block; float:left; position:relative; overflow:hidden; max-width:325px;}
-  .stretchy .spacer {width: 100.000%; height: auto;}
-  .stretchy .sprite {position:absolute; top:0; left:0; max-width:none; max-height:100.000%;}
+  .stretchy {display:block; float:left; position:relative; overflow:hidden; max-width:325.00000001px;}
+  .stretchy .spacer {width: 100.00000001%; height: auto;}
+  .stretchy .sprite {position:absolute; top:0; left:0; max-width:none; max-height:100.00000001%;}
   @for $i from 1 through 12 {
     .stretchy .sprite.s#{$i + 1} {
       left: percentage(-$i);
     }
   }
-  .stretchy.no-limit { max-width: none;} /*you could also set this to a pixel size, for example 320px, to limit the maximum*/
-  .stretchy.no-limit .sprite {min-height: 100.000%;}
+  .stretchy.no-limit { max-width: 600.00000001px;} /*you could also set this to a pixel size, for example 320px, to limit the maximum*/
+  .stretchy.no-limit .sprite {min-height: 100.00000001%;}
 
   /*END stretchy sprites by tobyj.net*/
   h1 {
@@ -301,7 +290,7 @@ h2 {
 #page-adopt-a-bike {
   background-color: ivory;
   padding: 1em;
-  svg {
+  .svg-sprite {
     display: block;
     width: 10em;
     height: 8em;
@@ -313,6 +302,16 @@ h2 {
   }
   p {
     padding: 10px;
+  }
+  #donate-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    a svg{
+      width: 216px;
+      height: 72px;
+      margin: 0 0;
+    }
   }
 }
 .full-width {

@@ -7,7 +7,6 @@ var app = (function(document, $) {
 			docElem.setAttribute('data-useragent', navigator.userAgent);
 		},
 		_init = function() {
-			$(document).foundation();
 			_userAgentInit();
 		};
 
@@ -26,10 +25,11 @@ var app = (function(document, $) {
 
 $(document).ready(function() {
 	'use strict';
+	$(document).foundation();
 });
 
 $( window ).load(function() {
 	'use strict';
-	$('img.sprite').attr('src', '/images/gallery-grid.jpg');
-	$('img.spacer').attr('src', '/images/spacer.png');
+	$('.sprite').attr('src', '/images/gallery-grid.jpg');
+	$('.spacer').attr('src', '/images/spacer.png');
 });
