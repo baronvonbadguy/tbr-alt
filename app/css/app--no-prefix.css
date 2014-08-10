@@ -5237,6 +5237,14 @@ h2 {
   }
 }
 
+.full-width {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: inherit;
+  overflow-x: hidden;
+}
+
 #page-splash {
   display: flex;
   flex-direction: column;
@@ -5244,12 +5252,21 @@ h2 {
   overflow-y: hidden;
   width: 100%;
   height: 500px;
+  height: 100vh;
   padding: 0 0;
   background-image: url("/images/splash.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: top center;
   background-size: cover;
+}
+@media only screen and (min-width: 40.063em) {
+  #page-splash {
+    background-attachment: fixed;
+  }
+}
+#page-splash a {
+  text-decoration: none;
+  color: ivory;
 }
 #page-splash #splash-title {
   font-family: 'League Gothic';
@@ -5282,9 +5299,13 @@ h2 {
 #page-programs {
   background-image: url("/images/programs-alt.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: top center;
   background-size: cover;
+}
+@media only screen and (min-width: 40.063em) {
+  #page-programs {
+    background-attachment: fixed;
+  }
 }
 #page-programs ul {
   margin-bottom: 1em;
@@ -5433,9 +5454,9 @@ h2 {
 
 #page-gallery {
   /*
-Stretchy Sprites by tobyj.net
-Feel free to copy and reuse as you like
-*/
+  Stretchy Sprites by tobyj.net
+  Feel free to copy and reuse as you like
+  */
   /*Set the max-width to the width of your individual sprites:*/
   /*you could also set this to a pixel size, for example 320px, to limit the maximum*/
   /*END stretchy sprites by tobyj.net*/
@@ -5550,10 +5571,8 @@ Feel free to copy and reuse as you like
   margin: 0 0;
 }
 
-.full-width {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: inherit;
-  overflow-x: hidden;
+#page-newsletter h2 {
+  color: ivory;
+  text-transform: uppercase;
+  text-align: center;
 }

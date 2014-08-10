@@ -14,8 +14,10 @@ html(class="no-js", lang="en")
 				#splash-title-container
 					#splash-title TROY BIKE RESCUE
 					#splash-address 
-						h2 3280 6th Avenue Troy, NY 12180
-						h2 (518)-328-4827
+						h2 
+							a(href="//maps.apple.com/?daddr=3280+6th+Avenue+Troy,+NY+12180")= "3280 6th Avenue Troy, NY 12180"
+						h2 
+							a(href="tel://1-518-328-4827")= "(518) 328-4827"
 					#splash-social-media
 						a(href="http://www.facebook.com/troybikerescue")
 							+svg-sprite(2, 1, 'facebook')
@@ -126,4 +128,14 @@ html(class="no-js", lang="en")
 									else
 										img.sprite(class=("s" + i) src="/images/gallery-grid-small.jpg" alt="gallery sprite sheet")
 							- i++
+		.row.full-width
+			#page-newsletter.small-12.columns
+				form(action='http://troybikerescue.us7.list-manage2.com/subscribe/post?u=31d106a1f84385a3ff1c3133d&id=b2a8d8cf3e', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+					.row
+						h2 Subscribe to our monthly newsletter
+					.row.collapse
+						.small-8.columns
+							input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='email address', required='')
+						.small-4.columns
+							input#mc-embedded-subscribe.button.postfix(type='submit', value='Subscribe', name='subscribe')
 		include footer
