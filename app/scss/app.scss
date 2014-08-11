@@ -71,6 +71,11 @@ $social-media-icons: "/images/social-media-icons.svg";
   }
 }
 
+@mixin league-gothic {
+  font-family: Impact, Charcoal, sans-serif;
+  font-family: 'League Gothic', Charcoal, sans-serif;
+}
+
 //----------------------------------------
 //--------------G L O B A L---------------
 //----------------------------------------
@@ -80,14 +85,15 @@ html {
   body {
     background: #222222;
     padding: 0 0;
-    font-family: 'Droid Sans';
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Droid Sans', Helvetica, sans-serif;
     & > .row {
       margin: 0 0;
     }
   }
 }
 h1 {
-  font-family: 'League Gothic';
+  @include league-gothic;
   font-size: 3.3em;
   letter-spacing: 0.05em;
   color: ivory;
@@ -100,7 +106,7 @@ h1 {
   }
 }
 h2 {
-  font-family: 'League Gothic';
+  @include league-gothic;
   font-size: 1.8em;
   letter-spacing: .05em;
   @include media(mobile) {
@@ -170,7 +176,7 @@ h2 {
 }
 
 #page-programs {
-  @include background-image('/images/programs-alt.jpg');
+  @include background-image('/images/programs.jpg');
   
   //program groups container
   ul {
@@ -289,7 +295,7 @@ h2 {
       font-size: 6em;
     }
   }
-  
+
   #gallery-block {
     width: 100%
   }

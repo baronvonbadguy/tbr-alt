@@ -5191,14 +5191,16 @@ html {
 html body {
   background: #222222;
   padding: 0 0;
-  font-family: 'Droid Sans';
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Droid Sans', Helvetica, sans-serif;
 }
 html body > .row {
   margin: 0 0;
 }
 
 h1 {
-  font-family: 'League Gothic';
+  font-family: Impact, Charcoal, sans-serif;
+  font-family: 'League Gothic', Charcoal, sans-serif;
   font-size: 3.3em;
   letter-spacing: 0.05em;
   color: ivory;
@@ -5216,7 +5218,8 @@ h1 {
 }
 
 h2 {
-  font-family: 'League Gothic';
+  font-family: Impact, Charcoal, sans-serif;
+  font-family: 'League Gothic', Charcoal, sans-serif;
   font-size: 1.8em;
   letter-spacing: .05em;
 }
@@ -5309,7 +5312,7 @@ h2 {
 }
 
 #page-programs {
-  background-image: url("/images/programs-alt.jpg");
+  background-image: url("/images/programs.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
