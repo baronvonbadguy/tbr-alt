@@ -76,7 +76,7 @@ module.exports = function(grunt) {
 		},
 
 		imagemin: {
-			target: {
+			dynamic: {
 				options: {
 					optimizationLevel: 7,
 					progressive: true
