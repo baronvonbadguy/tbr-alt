@@ -1,9 +1,9 @@
 doctype html
 html(class="no-js", lang="en")
 	include header
-	mixin svg-sprite(pos, len, id)
-		//got my svg sprie sheet on a 72px base grid
-		-var viewbox = (72 * pos) + " 0 " + (72 * len) + " 72"
+	mixin svg-sprite(len, id)
+		//got my svg sprie sheet on a 100px base grid
+		-var viewbox =  "0 0 " + (100 * len) + " 100"
 		svg.svg-sprite(viewbox=viewbox)
 			use(xlink:href=("#" + id))
 	body
@@ -20,16 +20,16 @@ html(class="no-js", lang="en")
 							a(href="tel://1-518-328-4827")= "(518) 328-4827"
 					#splash-social-media
 						a(href="http://www.facebook.com/troybikerescue")
-							+svg-sprite(2, 1, 'facebook')
+							+svg-sprite(1, 'facebook')
 						a(href="https://twitter.com/troybikerescue")
-							+svg-sprite(3, 1, 'twitter')
+							+svg-sprite(1, 'twitter')
 						a(href="http://instagram.com/troybikerescue")
-							+svg-sprite(4, 1, 'instagram')
+							+svg-sprite(1, 'instagram')
 
 		.row.full-width
 			#page-about.small-12.columns
 				.row
-					h1 LEARN ABOUT US
+					h1 WHO WE ARE
 				.row
 					.small-12.medium-10.large-8.medium-centered.columns
 						p.
@@ -47,7 +47,7 @@ html(class="no-js", lang="en")
 							li.blockgrid-li
 								.program#program--learn-earn(data-equalizer-watch)
 									.small-2.medium-4.large-12.columns
-										+svg-sprite(0, 1, 'brain')
+										+svg-sprite(1, 'brain')
 									.small-8.medium-8.large-12.columns
 										h2 LEARN &amp; EARN
 									.small-0.medium-8.large-12.columns
@@ -60,7 +60,7 @@ html(class="no-js", lang="en")
 							li.blockgrid-li
 								.program#program--open-shop(data-equalizer-watch)
 									.small-2.medium-4.large-12.columns
-										+svg-sprite(10, 1, 'lock')
+										+svg-sprite(1, 'lock')
 									.small-5.medium-8.large-12.columns
 										h2 OPEN SHOP
 									.small-5.medium-8.large-12.columns
@@ -72,7 +72,7 @@ html(class="no-js", lang="en")
 							li.blockgrid-li
 								.program#program--youth-shop(data-equalizer-watch)
 									.small-2.medium-4.large-12.columns
-										+svg-sprite(11, 1, 'child')
+										+svg-sprite(1, 'child')
 									.small-5.medium-8.large-12.columns
 										h2 YOUTH SHOP
 									.small-5.medium-8.large-12.columns
@@ -85,7 +85,7 @@ html(class="no-js", lang="en")
 							li.blockgrid-li
 								.program#program--fem-shop(data-equalizer-watch)
 									.small-2.medium-4.large-12.columns
-										+svg-sprite(1, 1, 'trans')
+										+svg-sprite(1, 'trans')
 									.small-5.medium-8.large-12.columns
 										h2 FEM SHOP
 									.small-5.medium-8.large-12.columns
@@ -97,7 +97,7 @@ html(class="no-js", lang="en")
 		.row.full-width
 			#page-adopt-a-bike
 				.row
-					+svg-sprite(8, 2, 'bicycle')
+					+svg-sprite(2, 'bicycle')
 					h1 ADOPT A BIKE
 				.row
 					.small-12.medium-8.large-6.medium-centered.columns
@@ -111,7 +111,7 @@ html(class="no-js", lang="en")
 				.row
 					#donate-button
 						a(href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CBUZAKHL5EDKG&lc=US&item_name=Troy%20Bike%20Rescue&no_note=0&cn=Any%20comments%20for%20TBR%3f&no_shipping=1&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted")
-							+svg-sprite(5, 3, 'donate')
+							+svg-sprite(3, 'donate')
 		.row.full-width
 			#page-gallery.small-12.columns
 				.row
