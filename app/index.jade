@@ -116,9 +116,10 @@ html(class="no-js", lang="en")
 			#page-gallery.small-12.columns
 				.row
 					h1 CHECK US OUT
-					a#button--picasa.button(href='//picasaweb.google.com/107632478766557853949')= 'PICASA PORTFOLIO'
+					a#button--picasa.button(href='//picasaweb.google.com/107632478766557853949')= 'PICASA GALLERY'
 				.row.full-width
-					img#gallery-block(data-interchange="[/images/gallery-small.jpg, (small)], [/images/gallery-medium.jpg, (medium)], [/images/gallery-large.jpg, (large)], [/images/gallery-large.jpg, (orientation: landscape)]")
+					img#gallery-block(data-interchange="[/images/gallery-small.jpg, (default)], [/images/gallery-medium.jpg, (medium)], [/images/gallery-large.jpg, (large)], [/images/gallery-large.jpg, (orientation: landscape)]")
+					noscript: img#gallery-block(src="/images/gallery-medium.jpg")
 		.row.full-width
 			#page-newsletter.small-12.columns
 				form(action='http://troybikerescue.us7.list-manage2.com/subscribe/post?u=31d106a1f84385a3ff1c3133d&id=b2a8d8cf3e', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
