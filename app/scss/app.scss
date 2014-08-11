@@ -281,10 +281,15 @@ h2 {
 }
 
 #page-gallery {
-  
+  & > .row:first-of-type {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background: radial-gradient(ellipse at center, rgba(#000000, 0.5) 0%,rgba(#000000, 0.5) 10%,rgba(#000000, 0) 100%); /* W3C */  }
   h1 {
     font-size: 4em;
-    position: absolute;
     width: 100%;
     text-align: center;
     z-index: 2;
@@ -295,7 +300,32 @@ h2 {
       font-size: 6em;
     }
   }
-
+  #button--picasa {
+    @include button($button-med, rgba(#000000, 0.2), true, false, false, false);
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: ivory;
+    color: ivory;
+    font-size: 8vw;
+    letter-spacing: 3px;
+    @include league-gothic;
+    &:hover {
+      color: ivory;
+      background-color: rgba(ivory, 0.1);
+    }
+    @include media(tablet) {
+      width: 50%;
+      font-size: 5vw;
+    }
+    @include media(desktop) {
+      width: 35%;
+      font-size: 3vw;
+    }
+  }
   #gallery-block {
     width: 100%
   }
@@ -335,7 +365,7 @@ h2 {
     text-transform: uppercase;
     text-align: center;
     font-size: 1.5em;
-    font-size: 7vw;
+    font-size: 6vw;
     @include media(tablet) {
       font-size: 3.5vw;
     }
