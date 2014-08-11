@@ -5464,75 +5464,6 @@ h2 {
   }
 }
 
-#page-gallery {
-  /*
-  Stretchy Sprites by tobyj.net
-  Feel free to copy and reuse as you like
-  */
-  /*Set the max-width to the width of your individual sprites:*/
-  /*you could also set this to a pixel size, for example 320px, to limit the maximum*/
-  /*END stretchy sprites by tobyj.net*/
-}
-#page-gallery .stretchy {
-  display: block;
-  float: left;
-  position: relative;
-  overflow: hidden;
-  max-width: 325.00000001px;
-}
-#page-gallery .stretchy .spacer {
-  width: 100.00000001%;
-  height: auto;
-}
-#page-gallery .stretchy .sprite {
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-width: none;
-  max-height: 100.00000001%;
-}
-#page-gallery .stretchy .sprite.s2 {
-  left: -100%;
-}
-#page-gallery .stretchy .sprite.s3 {
-  left: -200%;
-}
-#page-gallery .stretchy .sprite.s4 {
-  left: -300%;
-}
-#page-gallery .stretchy .sprite.s5 {
-  left: -400%;
-}
-#page-gallery .stretchy .sprite.s6 {
-  left: -500%;
-}
-#page-gallery .stretchy .sprite.s7 {
-  left: -600%;
-}
-#page-gallery .stretchy .sprite.s8 {
-  left: -700%;
-}
-#page-gallery .stretchy .sprite.s9 {
-  left: -800%;
-}
-#page-gallery .stretchy .sprite.s10 {
-  left: -900%;
-}
-#page-gallery .stretchy .sprite.s11 {
-  left: -1000%;
-}
-#page-gallery .stretchy .sprite.s12 {
-  left: -1100%;
-}
-#page-gallery .stretchy .sprite.s13 {
-  left: -1200%;
-}
-#page-gallery .stretchy.no-limit {
-  max-width: 600.00000001px;
-}
-#page-gallery .stretchy.no-limit .sprite {
-  min-height: 100.00000001%;
-}
 #page-gallery h1 {
   font-size: 4em;
   position: absolute;
@@ -5550,9 +5481,8 @@ h2 {
     font-size: 6em;
   }
 }
-#page-gallery .gallery-block {
-  padding: 0;
-  margin: 0;
+#page-gallery #gallery-block {
+  width: 100%;
 }
 
 #page-adopt-a-bike {

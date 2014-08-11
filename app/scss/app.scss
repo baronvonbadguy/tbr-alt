@@ -275,23 +275,7 @@ h2 {
 }
 
 #page-gallery {
-  /*
-  Stretchy Sprites by tobyj.net
-  Feel free to copy and reuse as you like
-  */
-  /*Set the max-width to the width of your individual sprites:*/
-  .stretchy {display:block; float:left; position:relative; overflow:hidden; max-width:325.00000001px;}
-  .stretchy .spacer {width: 100.00000001%; height: auto;}
-  .stretchy .sprite {position:absolute; top:0; left:0; max-width:none; max-height:100.00000001%;}
-  @for $i from 1 through 12 {
-    .stretchy .sprite.s#{$i + 1} {
-      left: percentage(-$i);
-    }
-  }
-  .stretchy.no-limit { max-width: 600.00000001px;} /*you could also set this to a pixel size, for example 320px, to limit the maximum*/
-  .stretchy.no-limit .sprite {min-height: 100.00000001%;}
-
-  /*END stretchy sprites by tobyj.net*/
+  
   h1 {
     font-size: 4em;
     position: absolute;
@@ -305,9 +289,9 @@ h2 {
       font-size: 6em;
     }
   }
-  .gallery-block {
-    padding: 0;
-    margin: 0;
+  
+  #gallery-block {
+    width: 100%
   }
 }
 

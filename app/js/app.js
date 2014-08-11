@@ -8,7 +8,6 @@ var app = (function(document, $) {
 		},
 		_init = function() {
 			_userAgentInit();
-			$('');
 		};
 
 	return {
@@ -31,6 +30,7 @@ $(document).ready(function() {
 
 $( window ).load(function() {
 	'use strict';
-	$('.sprite').attr('src', '/images/gallery-grid.jpg');
-	$('.spacer').attr('src', '/images/spacer.png');
+	$('#gallery-block').attr('data-interchange', '[/images/gallery-small-hi.jpg, (small)], [/images/gallery-medium-hi.jpg, (medium)], [/images/gallery-large-hi.jpg, (large)], [/images/gallery-large-hi.jpg, (orientation: landscape)]')
+	$(document).foundation('interchange', 'reflow');
+	console.log('killem');
 });
