@@ -7,8 +7,8 @@ html(class="no-js", lang="en")
 		svg.svg-sprite(viewbox=viewbox)
 			use(xlink:href=("#" + id))
 	body
-		#svg-wrapper(style="display: none;")
-			include images/svg-sprites.svg
+		.svg-wrapper(style="display: none;")
+			include images/svg-sprites--social-media.svg
 		.row.full-width
 			#page-splash.small-12.columns
 				#splash-title-container
@@ -42,6 +42,8 @@ html(class="no-js", lang="en")
 				.row
 					h1 CHECK US OUT
 					a#button--picasa.button(href='//picasaweb.google.com/107632478766557853949')= 'PICASA GALLERY'		
+		.svg-wrapper(style="display: none;")
+			include images/svg-sprites.svg
 		.row.full-width
 			#page-learn-earn.small-12.columns
 				.row
