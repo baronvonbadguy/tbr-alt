@@ -5615,6 +5615,13 @@ h5 {
   height: 72px;
   margin: 0 0;
 }
+#page-adopt-a-bike #donate-button a svg use, #page-learn-earn #donate-button a svg use {
+  fill: #222222;
+}
+#page-adopt-a-bike #donate-button a svg use:hover, #page-learn-earn #donate-button a svg use:hover {
+  transition: all 0.3s ease-in-out;
+  fill: #555555;
+}
 
 #page-newsletter h2 {
   color: ivory;
