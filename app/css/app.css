@@ -5192,7 +5192,7 @@ html body {
   background: #222222;
   padding: 0 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-family: 'Droid Sans', Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
 }
 html body > .row {
   margin: 0 0;
@@ -5239,6 +5239,11 @@ h2 {
 
 p {
   font-size: 1.2em;
+}
+
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Droid Sans', Helvetica, sans-serif;
 }
 
 .full-width {
@@ -5391,7 +5396,6 @@ p {
   margin-left: 10px;
 }
 #page-programs h5 {
-  font-family: 'Droid Sans';
   text-align: center;
 }
 @media only screen and (max-width: 40em) {
@@ -5425,7 +5429,6 @@ p {
   border-bottom-width: 2px;
   border-bottom-style: solid;
   text-align: justify;
-  font-family: 'Droid Sans';
 }
 @media only screen and (min-width: 40.063em) {
   #page-programs p {

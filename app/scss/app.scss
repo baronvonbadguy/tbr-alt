@@ -86,7 +86,7 @@ html {
     background: #222222;
     padding: 0 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-family: 'Droid Sans', Helvetica, sans-serif;
+    font-family: 'Open Sans', Helvetica, sans-serif;
     & > .row {
       margin: 0 0;
     }
@@ -121,6 +121,10 @@ h2 {
 }
 p {
   font-size: 1.2em;
+}
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Droid Sans', Helvetica, sans-serif;
 }
 .full-width {
   width: 100%;
@@ -243,7 +247,6 @@ p {
     margin-left: 10px;  
   }
   h5 {
-    font-family: 'Droid Sans';
     text-align: center;
     @include media(mobile) {
       margin-bottom: 0px;
@@ -271,7 +274,6 @@ p {
     border-bottom-width: 2px;
     border-bottom-style: solid;
     text-align: justify; 
-    font-family: 'Droid Sans';
     @include media(tablet) {
       background-color: rgba(#222222, 0.75);
     }
