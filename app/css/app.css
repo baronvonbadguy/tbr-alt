@@ -5237,6 +5237,10 @@ h2 {
   }
 }
 
+p {
+  font-size: 1.2em;
+}
+
 .full-width {
   width: 100%;
   margin-left: auto;
@@ -5319,16 +5323,8 @@ h2 {
 #page-about {
   background-color: ivory;
 }
-@media only screen and (min-width: 64.063em) {
-  #page-about {
-    height: 25vh;
-  }
-}
 #page-about h1 {
   color: #222222;
-}
-#page-about p {
-  font-size: 1em;
 }
 @media only screen and (max-width: 40em) {
   #page-about p {

@@ -119,6 +119,9 @@ h2 {
     margin: 0px;
   }
 }
+p {
+  font-size: 1.2em;
+}
 .full-width {
   width: 100%;
   margin-left: auto;
@@ -180,14 +183,11 @@ h2 {
 
 #page-about {
   background-color: ivory;
-  @include media(desktop) {
-    height: 25vh;
-  }
+
   h1 {
     color: #222222;
   }
   p {
-    font-size: 1em;
     @include media(mobile) {
       text-align: justify;
     }
