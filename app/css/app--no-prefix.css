@@ -5261,6 +5261,11 @@ h2 {
   background-position: top center;
   background-size: cover;
 }
+@media only screen and (min-width: 64.063em) {
+  #page-splash {
+    height: 75vh;
+  }
+}
 @media only screen and (min-width: 40.063em) {
   #page-splash {
     background-attachment: fixed;
@@ -5298,6 +5303,26 @@ h2 {
   text-align: center;
 }
 
+#page-about {
+  background-color: ivory;
+}
+@media only screen and (min-width: 64.063em) {
+  #page-about {
+    height: 25vh;
+  }
+}
+#page-about h1 {
+  color: #222222;
+}
+#page-about p {
+  font-size: 1em;
+}
+@media only screen and (max-width: 40em) {
+  #page-about p {
+    text-align: justify;
+  }
+}
+
 #page-programs {
   background-image: url("/images/programs.jpg");
   background-repeat: no-repeat;
@@ -5321,7 +5346,7 @@ h2 {
 #page-programs .blockgrid-li {
   padding: 0;
   margin-bottom: 5px;
-  background-color: rgba(34, 34, 34, 0.75);
+  background-color: rgba(34, 34, 34, 0.45);
 }
 @media only screen and (min-width: 40.063em) {
   #page-programs .blockgrid-li {
@@ -5347,46 +5372,6 @@ h2 {
 @media only screen and (min-width: 64.063em) {
   #page-programs svg {
     height: 6em;
-  }
-}
-#page-programs .icon-trans {
-  width: 100%;
-  height: 2em;
-  margin-left: auto;
-  margin-top: 0.7em;
-  background: url("/images/trans-icon.svg");
-  background-repeat: no-repeat;
-}
-@media only screen and (min-width: 40.063em) {
-  #page-programs .icon-trans {
-    height: 4em;
-    margin-top: 0;
-  }
-}
-@media only screen and (min-width: 64.063em) {
-  #page-programs .icon-trans {
-    height: 6em;
-    margin-bottom: 0.45em;
-  }
-}
-#page-programs .icon-brain {
-  width: 100%;
-  height: 2em;
-  margin-left: auto;
-  margin-top: 0.7em;
-  background: url("/images/brain-icon.svg");
-  background-repeat: no-repeat;
-}
-@media only screen and (min-width: 40.063em) {
-  #page-programs .icon-brain {
-    height: 4em;
-    margin-top: 0;
-  }
-}
-@media only screen and (min-width: 64.063em) {
-  #page-programs .icon-brain {
-    height: 6em;
-    margin-bottom: 0.45em;
   }
 }
 #page-programs p, #page-programs h2, #page-programs h5 {
@@ -5439,28 +5424,90 @@ h2 {
   }
 }
 
-#page-about {
-  background-color: ivory;
+#page-gallery {
+  height: 566px;
+  background-image: url("/images/gallery-small.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
 }
-#page-about h1 {
-  color: #222222;
-}
-#page-about p {
-  font-size: 1.3em;
-}
-@media only screen and (max-width: 40em) {
-  #page-about p {
-    text-align: justify;
+@media only screen and (min-width: 40.063em) {
+  #page-gallery {
+    background-attachment: fixed;
   }
 }
-
+@media only screen and (min-width: 40.063em) {
+  #page-gallery {
+    background-image: url("/images/gallery-medium.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 40.063em) and (min-width: 40.063em) {
+  #page-gallery {
+    background-attachment: fixed;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  #page-gallery {
+    height: 100vh;
+    background-image: url("/images/gallery-large.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 64.063em) and (min-width: 40.063em) {
+  #page-gallery {
+    background-attachment: fixed;
+  }
+}
+#page-gallery.hi-res {
+  background-image: url("/images/gallery-small-hi.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+@media only screen and (min-width: 40.063em) {
+  #page-gallery.hi-res {
+    background-attachment: fixed;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  #page-gallery.hi-res {
+    background-image: url("/images/gallery-medium-hi.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 40.063em) and (min-width: 40.063em) {
+  #page-gallery.hi-res {
+    background-attachment: fixed;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  #page-gallery.hi-res {
+    background-image: url("/images/gallery-large-hi.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 64.063em) and (min-width: 40.063em) {
+  #page-gallery.hi-res {
+    background-attachment: fixed;
+  }
+}
 #page-gallery > .row:first-of-type {
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
   width: 100%;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0) 100%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 75%);
   /* W3C */
 }
 #page-gallery h1 {
@@ -5542,29 +5589,29 @@ h2 {
   width: 100%;
 }
 
-#page-adopt-a-bike {
+#page-adopt-a-bike, #page-learn-earn {
   background-color: ivory;
   padding: 1em;
 }
-#page-adopt-a-bike .svg-sprite {
+#page-adopt-a-bike .svg-sprite, #page-learn-earn .svg-sprite {
   display: block;
   width: 10em;
   height: 8em;
   margin: 1em auto;
 }
-#page-adopt-a-bike h1 {
+#page-adopt-a-bike h1, #page-learn-earn h1 {
   color: #222222;
   text-decoration: overline;
 }
-#page-adopt-a-bike p {
+#page-adopt-a-bike p, #page-learn-earn p {
   padding: 10px;
 }
-#page-adopt-a-bike #donate-button {
+#page-adopt-a-bike #donate-button, #page-learn-earn #donate-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-#page-adopt-a-bike #donate-button a svg {
+#page-adopt-a-bike #donate-button a svg, #page-learn-earn #donate-button a svg {
   width: 216px;
   height: 72px;
   margin: 0 0;
