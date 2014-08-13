@@ -237,14 +237,6 @@ h5 {
   }
 }
 
-#page-about {
-  background-color: ivory;
-
-  h1 {
-    color: #222222;
-  }
-}
-
 #page-programs {
   @include background-image('/images/programs.jpg');
   
@@ -359,12 +351,12 @@ h5 {
   }
 }
 
-#page-adopt-a-bike , #page-learn-earn {
+#page-adopt-a-bike, #page-learn-earn, #page-about {
   background-color: ivory;
   padding: 1em;
   .svg-sprite {
     display: block;
-    width: 10em;
+    width: 12em;
     height: 8em;
     margin: 0 auto;
     @include media(tablet) {

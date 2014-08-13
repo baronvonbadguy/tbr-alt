@@ -5425,13 +5425,6 @@ h5 {
   text-align: center;
 }
 
-#page-about {
-  background-color: ivory;
-}
-#page-about h1 {
-  color: #222222;
-}
-
 #page-programs {
   background-image: url("/images/programs.jpg");
   background-repeat: no-repeat;
@@ -5620,22 +5613,22 @@ h5 {
   }
 }
 
-#page-adopt-a-bike, #page-learn-earn {
+#page-adopt-a-bike, #page-learn-earn, #page-about {
   background-color: ivory;
   padding: 1em;
 }
-#page-adopt-a-bike .svg-sprite, #page-learn-earn .svg-sprite {
+#page-adopt-a-bike .svg-sprite, #page-learn-earn .svg-sprite, #page-about .svg-sprite {
   display: block;
-  width: 10em;
+  width: 12em;
   height: 8em;
   margin: 0 auto;
 }
 @media only screen and (min-width: 40.063em) {
-  #page-adopt-a-bike .svg-sprite, #page-learn-earn .svg-sprite {
+  #page-adopt-a-bike .svg-sprite, #page-learn-earn .svg-sprite, #page-about .svg-sprite {
     margin: 1em auto;
   }
 }
-#page-adopt-a-bike h1, #page-learn-earn h1 {
+#page-adopt-a-bike h1, #page-learn-earn h1, #page-about h1 {
   color: #222222;
   text-decoration: overline;
 }

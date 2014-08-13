@@ -1,14 +1,16 @@
 doctype html
 html(class="no-js", lang="en")
 	include header
-	mixin svg-sprite(len, id)
+	mixin svg-sprite(id)
 		//got my svg sprie sheet on a 100px base grid
-		-var viewbox =  "0 0 " + (100 * len) + " 100"
-		svg.svg-sprite(viewbox=viewbox)
+		- if (!attributes.viewbox) {
+		-		attributes.viewbox = "0 0 100 100";
+		-	}
+		svg.svg-sprite(viewbox=attributes.viewbox class=attributes.class)
 			use(xlink:href=("#" + id))
 	body
 		.svg-wrapper(style="display: none;")
-			include images/svg-sprites--social-media.svg
+			include images/svg-sprites--above-the-fold.svg
 		.row.full-width
 			#page-splash.small-12.columns
 				#splash-title-container
@@ -20,15 +22,15 @@ html(class="no-js", lang="en")
 							a(href="tel://1-518-328-4827")= "(518) 328-4827"
 					#splash-social-media
 						a(href="http://www.facebook.com/troybikerescue")
-							+svg-sprite(1, 'facebook')
+							+svg-sprite('facebook')
 						a(href="https://twitter.com/troybikerescue")
-							+svg-sprite(1, 'twitter')
+							+svg-sprite('twitter')
 						a(href="http://instagram.com/troybikerescue")
-							+svg-sprite(1, 'instagram')
-
+							+svg-sprite('instagram')
 		.row.full-width
 			#page-about.small-12.columns
 				.row
+					+svg-sprite('wrench')
 					h1 WHO WE ARE
 				.row
 					.small-12.medium-8.large-6.medium-centered.columns
@@ -40,10 +42,9 @@ html(class="no-js", lang="en")
 
 		//BTF loading
 		link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Droid+Serif|Open+Sans")
-
-		//BTF loading
 		.svg-wrapper(style="display: none;")
 			include images/svg-sprites.svg
+
 		.row.full-width
 			#page-programs.small-12.columns
 				.row
@@ -54,7 +55,7 @@ html(class="no-js", lang="en")
 							li.blockgrid-li
 								.program#program--open-shop(data-equalizer-watch)
 									.small-2.medium-4.large-12.columns
-										+svg-sprite(1, 'lock')
+										+svg-sprite('lock')
 									.small-5.medium-8.large-12.columns
 										h2 OPEN SHOP
 									.small-5.medium-8.large-12.columns
@@ -66,7 +67,7 @@ html(class="no-js", lang="en")
 							li.blockgrid-li
 								.program#program--youth-shop(data-equalizer-watch)
 									.small-2.medium-4.large-12.columns
-										+svg-sprite(1, 'child')
+										+svg-sprite('child')
 									.small-5.medium-8.large-12.columns
 										h2 YOUTH SHOP
 									.small-5.medium-8.large-12.columns
@@ -79,7 +80,7 @@ html(class="no-js", lang="en")
 							li.blockgrid-li
 								.program#program--fem-shop(data-equalizer-watch)
 									.small-2.medium-4.large-12.columns
-										+svg-sprite(1, 'trans')
+										+svg-sprite('trans')
 									.small-5.medium-8.large-12.columns
 										h2 FEM SHOP
 									.small-5.medium-8.large-12.columns
@@ -91,7 +92,7 @@ html(class="no-js", lang="en")
 		.row.full-width
 			#page-learn-earn.small-12.columns
 				.row
-					+svg-sprite(1, 'wrench')
+					+svg-sprite('brain')
 					h1 LEARN &amp; EARN
 				.row
 					.small-12.medium-8.large-6.medium-centered.columns
@@ -112,11 +113,11 @@ html(class="no-js", lang="en")
 							The key to volunteering is coming back and creating a semi-consistent
 							schedule for yourself and others.  If you keep showing up, not only 
 							will you learn, but your presence will be appreciated.
-					a#button--volunteer.button.clear-button(href='//www.signupgenius.com/go/10c054baca823aafb6-volunteer')= 'SIGN UP'
+					a#button--volunteer.button.clear-button(href='//www.signupgenius.com/go/10c054baca823aafb6-volunteer')= 'GET STARTED'
 		.row.full-width
 			#page-adopt-a-bike
 				.row
-					+svg-sprite(2, 'bicycle')
+					+svg-sprite('bicycle').wide(viewbox="0 0 100 55")
 					h1 ADOPT A BIKE
 				.row
 					.small-12.medium-8.large-6.medium-centered.columns
