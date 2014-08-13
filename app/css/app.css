@@ -5336,6 +5336,8 @@ h5 {
 .flex-center {
   height: 100%;
   width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5360,21 +5362,7 @@ h5 {
 }
 
 #page-splash {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   overflow-y: hidden;
-  width: 100%;
   height: 568px;
   padding: 0 0;
   background-image: url("/images/splash.jpg");

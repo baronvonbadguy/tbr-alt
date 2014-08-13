@@ -13,7 +13,7 @@ html(class="no-js", lang="en")
 			include images/svg-sprites--above-the-fold.svg
 		.row.full-width
 			#page-splash.small-12.columns
-				#splash-title-container
+				.row.flex-center.collapse
 					#splash-title TROY BIKE RESCUE
 					#splash-address 
 						h2 
@@ -41,7 +41,6 @@ html(class="no-js", lang="en")
 							accept donations of any bikes, parts, or tools.
 
 		//BTF loading
-		link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Droid+Serif|Open+Sans")
 		.svg-wrapper(style="display: none;")
 			include images/svg-sprites.svg
 
@@ -148,3 +147,4 @@ html(class="no-js", lang="en")
 								.small-4.columns
 									input#mc-embedded-subscribe.button.postfix(type='submit', value='Subscribe', name='subscribe')
 		include footer
+	link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Open+Sans")

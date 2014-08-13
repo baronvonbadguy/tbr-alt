@@ -65,13 +65,7 @@ module.exports = function(grunt) {
 					cwd:'<%= app %>/',
 					src: ['fonts/**', '**/*.html', '!**/*.scss', '!bower_components/**'],
 					dest: '<%= dist %>/'
-				} , {
-					expand: true,
-					flatten: true,
-					src: ['<%= app %>/bower_components/font-awesome/fonts/**'],
-					dest: '<%= dist %>/fonts/',
-					filter: 'isFile'
-				} ]
+				}]
 			},
 		},
 
@@ -90,12 +84,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		uglify: {
-			options: {
-				preserveComments: 'some',
-				mangle: false
-			}
-		},
 
 		useminPrepare: {
 			html: ['<%= app %>/index.html'],
@@ -104,11 +92,19 @@ module.exports = function(grunt) {
 			}
 		},
 
+		uglify: {
+			options: {
+				preserveComments: 'some',
+				mangle: false
+			},
+			dist: {}
+		},
+
 		usemin: {
 			html: ['<%= dist %>/**/*.html', '!<%= app %>/bower_components/**'],
 			css: ['<%= dist %>/css/**/*.css'],
 			options: {
-				dirs: ['<%= dist %>']
+				assetsDirs: ['<%= dist %>', '<%= dist %>/images']
 			}
 		},
 
@@ -182,7 +178,27 @@ module.exports = function(grunt) {
     		options: {
   				browsers: ['last 2 version', '> 5%', 'ie 9', 'chrome 20']
 			}
-        }
+        },
+
+        // Filerev
+		filerev: {
+		    options: {
+		        encoding: 'utf8',
+		        algorithm: 'md5',
+		        length: 20
+		    },
+		    release: {
+		        // filerev:release hashes(md5) all assets (images, js and css )
+		        // in dist directory
+		        files: [{
+		            src: [
+		                '<%= dist %>/images/*.{png,gif,jpg,svg}',
+		                '<%= dist %>/js/*.js',
+		                '<%= dist %>/css/*.css',
+		            ]
+		        }]
+		    }
+		}
 
 	});
 
@@ -194,6 +210,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
 	
-	grunt.registerTask('publish', ['compile-jade', 'compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
+	grunt.registerTask('publish', ['compile-jade', 'compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'filerev', 'usemin']);
 	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-filerev');
 };
