@@ -121,7 +121,10 @@ h2 {
 }
 p {
   font-size: 1.2em;
-  text-align: justify;
+  text-align: center;
+  @include media(tablet) {
+    text-align: justify;
+  }
   padding: 10px;
 }
 h5 {
@@ -309,7 +312,6 @@ h5 {
     border-bottom-width: 2px;
     border-bottom-style: solid;
     margin-bottom: 0px;
-    text-align: justify; 
     @include media(tablet) {
       background-color: rgba(#222222, 0.75);
       margin: 0 .25em 0 .25em;

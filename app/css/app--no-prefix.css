@@ -5242,8 +5242,13 @@ h2 {
 
 p {
   font-size: 1.2em;
-  text-align: justify;
+  text-align: center;
   padding: 10px;
+}
+@media only screen and (min-width: 40.063em) {
+  p {
+    text-align: justify;
+  }
 }
 
 h5 {
@@ -5484,7 +5489,6 @@ h5 {
   border-bottom-width: 2px;
   border-bottom-style: solid;
   margin-bottom: 0px;
-  text-align: justify;
 }
 @media only screen and (min-width: 40.063em) {
   #page-programs p {
