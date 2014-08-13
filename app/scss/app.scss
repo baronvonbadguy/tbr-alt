@@ -133,6 +133,44 @@ h5 {
   max-width: inherit;
   overflow-x: hidden;
 }
+.clear-button {
+  @include button($button-med, rgba(#000000, 0.2), true, false, false, false);
+  width: 65%;
+  margin: 0 auto;
+  padding: 10px;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: ivory;
+  color: ivory;
+  font-size: 8vw;
+  letter-spacing: 3px;
+  @include league-gothic;
+  &:hover {
+      color: ivory;
+      background-color: rgba(ivory, 0.1);
+    }
+    @include media(tablet) {
+      width: 50%;
+      font-size: 5vw;
+    }
+    @include media(desktop) {
+      width: 35%;
+      font-size: 3vw;
+    }
+}
+.flex-center {
+  height: 100%;
+  width: 100%;
+  //position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, rgba(#000000, 0.5) 0%,rgba(#000000, 0) 75%);
+  &.darker {
+    background: radial-gradient(ellipse at center, rgba(#000000, 0.5) 0%,rgba(#000000, 0) 100%);
+  }
+}
 
 //----------------------------------------
 //--------------P A G E S----------------
@@ -299,15 +337,7 @@ h5 {
       @include background-image('/images/gallery-large-hi.jpg');
     }
   }
-
-  & > .row:first-of-type {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    background: radial-gradient(ellipse at center, rgba(#000000, 0.5) 0%,rgba(#000000, 0) 75%); /* W3C */  }
+    
   h1 {
     font-size: 4em;
     width: 100%;
@@ -320,38 +350,9 @@ h5 {
       font-size: 6em;
     }
   }
-  #button--picasa {
-    @include button($button-med, rgba(#000000, 0.2), true, false, false, false);
-    width: 65%;
-    margin: 0 auto;
-    padding: 10px;
-    border-width: 4px;
-    border-style: solid;
-    border-radius: 5px;
-    border-color: ivory;
-    color: ivory;
-    font-size: 8vw;
-    letter-spacing: 3px;
-    @include league-gothic;
-    &:hover {
-      color: ivory;
-      background-color: rgba(ivory, 0.1);
-    }
-    @include media(tablet) {
-      width: 50%;
-      font-size: 5vw;
-    }
-    @include media(desktop) {
-      width: 35%;
-      font-size: 3vw;
-    }
-  }
-  #gallery-block {
-    width: 100%
-  }
 }
 
-#page-adopt-a-bike , #page-learn-earn{
+#page-adopt-a-bike , #page-learn-earn {
   background-color: ivory;
   padding: 1em;
   .svg-sprite {
@@ -384,6 +385,15 @@ h5 {
       }
     }
 
+  }
+}
+
+#page-volunteer {
+  @include background-image('/images/volunteer.jpg');
+  color: ivory;
+  text-align: justify;
+  & > .row {
+    padding-bottom: 2em;
   }
 }
 
