@@ -5636,6 +5636,13 @@ h5 {
     background-attachment: fixed;
   }
 }
+@media only screen and (max-width: 40em) {
+  #page-volunteer h1 {
+    font-size: 3.0em;
+    font-size: 12vw;
+    letter-spacing: .03em;
+  }
+}
 #page-volunteer > .row {
   padding-bottom: 2em;
 }

@@ -392,6 +392,13 @@ h5 {
   @include background-image('/images/volunteer.jpg');
   color: ivory;
   text-align: justify;
+  h1 {
+    @include media(mobile) {
+      font-size: 3.0em;
+      font-size: 12vw;
+      letter-spacing: .03em;
+    }
+  }
   & > .row {
     padding-bottom: 2em;
   }
