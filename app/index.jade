@@ -101,7 +101,7 @@ html(class="no-js", lang="en")
 							aquired during open shop hours and youth hours.
 		.row.full-width
 			#page-volunteer.small-12.columns
-				.row.flex-center.darker
+				.row.flex-center.darken.darker
 					h1 HOW TO GET INVOLVED
 					.small-12.medium-10.large-6.medium-centered.columns
 						p.
@@ -113,7 +113,6 @@ html(class="no-js", lang="en")
 							schedule for yourself and others.  If you keep showing up, not only 
 							will you learn, but your presence will be appreciated.
 					a#button--volunteer.button.clear-button(href='//www.signupgenius.com/go/10c054baca823aafb6-volunteer')= 'SIGN UP'
-		
 		.row.full-width
 			#page-adopt-a-bike
 				.row
@@ -128,13 +127,11 @@ html(class="no-js", lang="en")
 							Adoption Bikes are available on a first come first serve basis,
 							and are sold "as is" (some may require some TLC).
 							All proceeds from bike adoption fees pay TBR overhead. Without your donations, we cannot do what we do.
-				.row
-					#donate-button
-						a(href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CBUZAKHL5EDKG&lc=US&item_name=Troy%20Bike%20Rescue&no_note=0&cn=Any%20comments%20for%20TBR%3f&no_shipping=1&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted")
-							+svg-sprite(3, 'donate')
+				.row.flex-center
+					a#button--donate.button.clear-button.inverse(href='//www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CBUZAKHL5EDKG&lc=US&item_name=Troy%20Bike%20Rescue&no_note=0&cn=Any%20comments%20for%20TBR%3f&no_shipping=1&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted')= 'DONATE'
 		.row.full-width
 			#page-gallery.small-12.columns
-				.row.flex-center
+				.row.flex-center.darken
 					h1 CHECK US OUT
 					a#button--picasa.button.clear-button(href='//picasaweb.google.com/107632478766557853949')= 'PICASA GALLERY'		
 		.row.full-width

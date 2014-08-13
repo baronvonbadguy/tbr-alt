@@ -5303,7 +5303,6 @@ h5 {
   color: white;
 }
 .clear-button:hover {
-  color: ivory;
   background-color: rgba(255, 255, 240, 0.1);
 }
 @media only screen and (min-width: 40.063em) {
@@ -5318,6 +5317,17 @@ h5 {
     font-size: 3vw;
   }
 }
+.clear-button.inverse {
+  color: #222222;
+  border-color: #222222;
+  background-color: transparent;
+}
+.clear-button.inverse:hover {
+  transition: all 0.3s ease-in-out;
+  border-color: #444444;
+  color: #444444;
+  background-color: rgba(68, 68, 68, 0.05);
+}
 
 .flex-center {
   height: 100%;
@@ -5325,9 +5335,11 @@ h5 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.flex-center.darken {
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 75%);
 }
-.flex-center.darker {
+.flex-center.darken.darker {
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
@@ -5474,15 +5486,6 @@ h5 {
     clear: both;
   }
 }
-#page-programs h5.spacer {
-  display: none;
-  visibility: hidden;
-}
-@media only screen and (min-width: 40.063em) {
-  #page-programs h5.spacer {
-    display: block;
-  }
-}
 #page-programs p {
   border-bottom: ivory;
   border-bottom-width: 2px;
@@ -5598,28 +5601,16 @@ h5 {
   display: block;
   width: 10em;
   height: 8em;
-  margin: 1em auto;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 40.063em) {
+  #page-adopt-a-bike .svg-sprite, #page-learn-earn .svg-sprite {
+    margin: 1em auto;
+  }
 }
 #page-adopt-a-bike h1, #page-learn-earn h1 {
   color: #222222;
   text-decoration: overline;
-}
-#page-adopt-a-bike #donate-button, #page-learn-earn #donate-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-#page-adopt-a-bike #donate-button a svg, #page-learn-earn #donate-button a svg {
-  width: 216px;
-  height: 72px;
-  margin: 0 0;
-}
-#page-adopt-a-bike #donate-button a svg use, #page-learn-earn #donate-button a svg use {
-  fill: #222222;
-}
-#page-adopt-a-bike #donate-button a svg use:hover, #page-learn-earn #donate-button a svg use:hover {
-  transition: all 0.3s ease-in-out;
-  fill: #555555;
 }
 
 #page-volunteer {
