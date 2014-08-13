@@ -121,6 +121,8 @@ h2 {
 }
 p {
   font-size: 1.2em;
+  text-align: justify;
+  padding: 10px;
 }
 h5 {
   font-family: Arial, Helvetica, sans-serif;
@@ -229,11 +231,6 @@ h5 {
   h1 {
     color: #222222;
   }
-  p {
-    @include media(mobile) {
-      text-align: justify;
-    }
-  }
 }
 
 #page-programs {
@@ -249,6 +246,11 @@ h5 {
       margin: 0;
     }
   } 
+  @include media(tablet) {
+    .program > .columns {
+      padding: 0;
+    }
+  }
   //program groups
   .blockgrid-li {
     padding: 0;
@@ -306,14 +308,14 @@ h5 {
     }
   }
   p {
-    margin: 0 0;
-    padding: 10px;
     border-bottom: ivory;
     border-bottom-width: 2px;
     border-bottom-style: solid;
+    margin-bottom: 0px;
     text-align: justify; 
     @include media(tablet) {
       background-color: rgba(#222222, 0.75);
+      margin: 0 .25em 0 .25em;
     }
   }
 }
@@ -364,9 +366,6 @@ h5 {
   h1 {
     color: #222222;
     text-decoration: overline;
-  }
-  p {
-    padding: 10px;
   }
   #donate-button {
     display: flex;

@@ -5242,6 +5242,8 @@ h2 {
 
 p {
   font-size: 1.2em;
+  text-align: justify;
+  padding: 10px;
 }
 
 h5 {
@@ -5390,11 +5392,6 @@ h5 {
 #page-about h1 {
   color: #222222;
 }
-@media only screen and (max-width: 40em) {
-  #page-about p {
-    text-align: justify;
-  }
-}
 
 #page-programs {
   background-image: url("/images/programs.jpg");
@@ -5414,6 +5411,11 @@ h5 {
   #page-programs .columns {
     padding: 0;
     margin: 0;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  #page-programs .program > .columns {
+    padding: 0;
   }
 }
 #page-programs .blockgrid-li {
@@ -5482,16 +5484,16 @@ h5 {
   }
 }
 #page-programs p {
-  margin: 0 0;
-  padding: 10px;
   border-bottom: ivory;
   border-bottom-width: 2px;
   border-bottom-style: solid;
+  margin-bottom: 0px;
   text-align: justify;
 }
 @media only screen and (min-width: 40.063em) {
   #page-programs p {
     background-color: rgba(34, 34, 34, 0.75);
+    margin: 0 .25em 0 .25em;
   }
 }
 
@@ -5601,9 +5603,6 @@ h5 {
 #page-adopt-a-bike h1, #page-learn-earn h1 {
   color: #222222;
   text-decoration: overline;
-}
-#page-adopt-a-bike p, #page-learn-earn p {
-  padding: 10px;
 }
 #page-adopt-a-bike #donate-button, #page-learn-earn #donate-button {
   display: flex;
