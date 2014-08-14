@@ -2,7 +2,17 @@ head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable=no")
     title Welcome to Troy Bike Rescue
+    style(type='text/css'). 
+        @font-face {
+            font-family: 'League Gothic';
+            src: url('../fonts/leaguegothic-regular-webfont.woff') format('woff'),
+                 url('../fonts/leaguegothic-regular-webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
     // build:css css/app.min.css
     link(rel="stylesheet", href="css/app.css")
     link(rel="stylesheet", href="css/app_override.css")
     // endbuild
+    link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Open+Sans")
+

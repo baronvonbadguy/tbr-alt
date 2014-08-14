@@ -2,13 +2,14 @@ doctype html
 html(class="no-js", lang="en")
 	include header
 	mixin svg-sprite(id)
-		//got my svg sprie sheet on a 100px base grid
+		//got my svg sprite sheet on a 100px base grid
 		- if (!attributes.viewbox) {
 		-		attributes.viewbox = "0 0 100 100";
 		-	}
 		svg.svg-sprite(viewbox=attributes.viewbox class=attributes.class)
 			use(xlink:href=("#" + id))
 	body
+		.font-preloader(style="font-family: 'League Gothic';")
 		.svg-wrapper(style="display: none;")
 			include images/svg-sprites--above-the-fold.svg
 		.row.full-width
@@ -19,7 +20,7 @@ html(class="no-js", lang="en")
 						h2 
 							a(href="//maps.apple.com/?daddr=3280+6th+Avenue+Troy,+NY+12180")= "3280 6th Avenue Troy, NY 12180"
 						h2 
-							a(href="tel://1-518-328-4827")= "(518) 328-4827"
+							a(href="tel:1-518-328-4827")= "(518) 328-4827"
 					#splash-social-media
 						a(href="http://www.facebook.com/troybikerescue")
 							+svg-sprite('facebook')
@@ -33,14 +34,14 @@ html(class="no-js", lang="en")
 					+svg-sprite('wrench')(viewbox="0 0 100 90")
 					h1 WHO WE ARE
 				.row
-					.small-12.medium-8.large-6.medium-centered.columns
+					.small-12.medium-8.large-6.xlarge-4.medium-centered.columns
 						p.
 							Troy Bike Rescue is a collective of cycling enthusiasts committed to removing 
 							bikes from the waste stream and getting them back on the streets.  We help to 
 							build bicycle community in the capital region through hands-on education.  We 
 							accept donations of any bikes, parts, or tools.
 
-		//BTF loading
+		//bewlow the fold loading
 		.svg-wrapper(style="display: none;")
 			include images/svg-sprites.svg
 
@@ -49,7 +50,7 @@ html(class="no-js", lang="en")
 				.row
 					h1 COME JOIN US
 				.row
-					.small-12.columns
+					.small-12.large-10.large-centered.xlarge-8.columns
 						ul.small-block-grid-1.medium-block-grid-3(data-equalizer)
 							li.blockgrid-li
 								.program#program--open-shop(data-equalizer-watch)
@@ -94,7 +95,7 @@ html(class="no-js", lang="en")
 					+svg-sprite('brain')
 					h1 LEARN &amp; EARN
 				.row
-					.small-12.medium-8.large-6.medium-centered.columns
+					.small-12.medium-8.large-6.xlarge-4.medium-centered.columns
 						p.
 							Youth and adults can obtain a bike by putting in 6 Learn &amp; Earn 
 							hours working on Adoption Bikes and other TBR projects, which can be 
@@ -103,7 +104,7 @@ html(class="no-js", lang="en")
 			#page-volunteer.small-12.columns
 				.row.flex-center.darken.darker
 					h1 HOW TO GET INVOLVED
-					.small-12.medium-10.large-6.medium-centered.columns
+					.small-12.medium-10.large-6.xlarge-4.medium-centered.columns
 						p.
 							Volunteering is as simple as showing up to an open shop session and 
 							beginning to participate.  As a new volunteer you will have a lot to 
@@ -112,7 +113,8 @@ html(class="no-js", lang="en")
 							The key to volunteering is coming back and creating a semi-consistent
 							schedule for yourself and others.  If you keep showing up, not only 
 							will you learn, but your presence will be appreciated.
-					a#button--volunteer.button.clear-button(href='//www.signupgenius.com/go/10c054baca823aafb6-volunteer')= 'GET STARTED'
+					.small-10.medium-6.large-4.xlarge-3.small-centered.columns
+						a#button--volunteer.button.clear-button(href='//www.signupgenius.com/go/10c054baca823aafb6-volunteer')= 'SIGN UP'
 		.row.full-width
 			#page-adopt-a-bike
 				.row
@@ -127,13 +129,15 @@ html(class="no-js", lang="en")
 							Adoption Bikes are available on a first come first serve basis,
 							and are sold "as is" (some may require some TLC).
 							All proceeds from bike adoption fees pay TBR overhead. Without your donations, we cannot do what we do.
-				.row.flex-center
-					a#button--donate.button.clear-button.inverse(href='//www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CBUZAKHL5EDKG&lc=US&item_name=Troy%20Bike%20Rescue&no_note=0&cn=Any%20comments%20for%20TBR%3f&no_shipping=1&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted')= 'DONATE'
+				.row
+					.small-10.medium-6.large-4.xlarge-3.small-centered.columns
+						a.button.clear-button.inverse(href='//www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CBUZAKHL5EDKG&lc=US&item_name=Troy%20Bike%20Rescue&no_note=0&cn=Any%20comments%20for%20TBR%3f&no_shipping=1&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted')= 'DONATE'
 		.row.full-width
 			#page-gallery.small-12.columns
 				.row.flex-center.darken
 					h1 CHECK US OUT
-					a#button--picasa.button.clear-button(href='//picasaweb.google.com/107632478766557853949')= 'PICASA GALLERY'		
+					.small-10.medium-6.large-4.xlarge-3.small-centered.columns
+						a#button--picasa.button.clear-button(href='//picasaweb.google.com/107632478766557853949')= 'PICASA GALLERY'		
 		.row.full-width
 			#page-newsletter.small-12.columns
 				form(action='http://troybikerescue.us7.list-manage2.com/subscribe/post?u=31d106a1f84385a3ff1c3133d&id=b2a8d8cf3e', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
@@ -146,5 +150,32 @@ html(class="no-js", lang="en")
 									input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='email address', required='')
 								.small-4.columns
 									input#mc-embedded-subscribe.button.postfix(type='submit', value='Subscribe', name='subscribe')
+		.row.full-width
+			#page-links.small-12.columns
+				.row
+					.small-12.medium-4.columns
+						h5 Our Friends
+						ul
+							li: a(href="//www.albanybicyclecoalition.com/") Albany Bicycle Coalition
+							li: a(href="//carmenscafetroy.wordpress.com/") Carmen's Cafe
+							li: a(href="//www.happychain.net/") Happy Chain Lube
+							li: a(href="//nonamedesign.org/") No Name Design
+							li: a(href="//teamlunachix.com/albany_triathlon") Team LunaChix Albany
+							li: a(href="//alehousetroy.com/") The Ale House
+							li: a(href="//mediasanctuary.org/") The Sanctuary for Independent Media
+							li: a(href="//www.facebook.com/pages/Xs-to-Os-Vegan-Bakery/119997688525") Xs to Os Vegan Bakery
+					.small-12.medium-4.columns
+						.row
+							h5 Keep Connected
+							.small-12.medium-6.columns
+								#footer-social-media
+									a(href="http://www.facebook.com/troybikerescue")
+										+svg-sprite('facebook')
+									a(href="https://twitter.com/troybikerescue")
+										+svg-sprite('twitter')
+									a(href="http://instagram.com/troybikerescue")
+										+svg-sprite('instagram')
+					.small-12.medium-4.columns
+
+
 		include footer
-	link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Open+Sans")
