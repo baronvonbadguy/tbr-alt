@@ -114,6 +114,9 @@ h5 {
   font-family: Arial, Helvetica, sans-serif;
   font-family: 'Open Sans', Helvetica, sans-serif;
 }
+form.custom {
+  background-color: #444444;
+}
 .full-width {
   width: 100%;
   margin-left: auto;
@@ -199,13 +202,10 @@ h5 {
     justify-content: center;
     margin-top: 1em;
     & > a {
-      height: 3em;
-      width: 3em;
+      height: 3.5em;
+      width: 3.5em;
       margin: 15px;
-      & > svg {
-        height: 3em;
-        width: 3em;
-      }
+
     }
   }
   #splash-address {
@@ -329,7 +329,7 @@ h5 {
   }
 }
 
-#page-adopt-a-bike, #page-learn-earn, #page-about {
+#page-adopt-a-bike, #page-learn-earn, #page-about, #page-contact {
   background-color: ivory;
   padding: 1em;
   .svg-sprite {
@@ -344,6 +344,9 @@ h5 {
   h1 {
     color: #222222;
     text-decoration: overline;
+  }
+  h2 {
+    text-align: center;
   }
 }
 
@@ -364,14 +367,28 @@ h5 {
 }
 
 #page-newsletter {
-  h2 {
+  background-color: #444444;
+  padding: 1em;
+  h5 {
     color: ivory;
-    text-transform: uppercase;
     text-align: center;
-    font-size: 1.5em;
-    font-size: 6vw;
+    margin: 0 0;
+    @include media(mobile) {
+      padding-bottom: .5em;
+    }
     @include media(tablet) {
-      font-size: 3.5vw;
+      text-align: right;
+      padding-right: 0.5em;
+    }
+  } 
+  input {
+    margin: 0 0;
+  }
+  .container {
+    @include media(tablet) {
+      display: flex;
+      direction: row;
+      align-items: center;
     }
   }
 }
@@ -380,24 +397,17 @@ h5 {
   h5 {
     color: ivory;
   }
-  li {
+  ul {
     list-style: none;
+    margin-left: 0;
   }
   #footer-social-media {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     a {
       margin-bottom: 0.5em;
       svg {
-        width: 4em;
-        height: 4em;
-        &:hover {
-          @include media(tablet) {
-            @include single-transition(all .3s ease-in-out);
-            box-shadow: 0px 0px 25px rgba(ivory, 0.5);
-          }
-        }
+        width: 2em;
+        height: 2em;
+        margin-right: 0.5em;
       }
     }
   }

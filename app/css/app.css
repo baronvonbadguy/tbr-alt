@@ -5810,6 +5810,10 @@ h5 {
   font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
+form.custom {
+  background-color: #444444;
+}
+
 .full-width {
   width: 100%;
   margin-left: auto;
@@ -5959,13 +5963,9 @@ h5 {
   margin-top: 1em;
 }
 #page-splash #splash-social-media > a {
-  height: 3em;
-  width: 3em;
+  height: 3.5em;
+  width: 3.5em;
   margin: 15px;
-}
-#page-splash #splash-social-media > a > svg {
-  height: 3em;
-  width: 3em;
 }
 #page-splash #splash-address h2 {
   color: ivory;
@@ -6159,24 +6159,27 @@ h5 {
   }
 }
 
-#page-adopt-a-bike, #page-learn-earn, #page-about {
+#page-adopt-a-bike, #page-learn-earn, #page-about, #page-contact {
   background-color: ivory;
   padding: 1em;
 }
-#page-adopt-a-bike .svg-sprite, #page-learn-earn .svg-sprite, #page-about .svg-sprite {
+#page-adopt-a-bike .svg-sprite, #page-learn-earn .svg-sprite, #page-about .svg-sprite, #page-contact .svg-sprite {
   display: block;
   width: 11em;
   height: 8em;
   margin: 0 auto;
 }
 @media only screen and (min-width: 40.063em) {
-  #page-adopt-a-bike .svg-sprite, #page-learn-earn .svg-sprite, #page-about .svg-sprite {
+  #page-adopt-a-bike .svg-sprite, #page-learn-earn .svg-sprite, #page-about .svg-sprite, #page-contact .svg-sprite {
     margin: 1em auto;
   }
 }
-#page-adopt-a-bike h1, #page-learn-earn h1, #page-about h1 {
+#page-adopt-a-bike h1, #page-learn-earn h1, #page-about h1, #page-contact h1 {
   color: #222222;
   text-decoration: overline;
+}
+#page-adopt-a-bike h2, #page-learn-earn h2, #page-about h2, #page-contact h2 {
+  text-align: center;
 }
 
 #page-volunteer {
@@ -6203,51 +6206,55 @@ h5 {
   padding-bottom: 2em;
 }
 
-#page-newsletter h2 {
+#page-newsletter {
+  background-color: #444444;
+  padding: 1em;
+}
+#page-newsletter h5 {
   color: ivory;
-  text-transform: uppercase;
   text-align: center;
-  font-size: 1.5em;
-  font-size: 6vw;
+  margin: 0 0;
+}
+@media only screen and (max-width: 40em) {
+  #page-newsletter h5 {
+    padding-bottom: .5em;
+  }
 }
 @media only screen and (min-width: 40.063em) {
-  #page-newsletter h2 {
-    font-size: 3.5vw;
+  #page-newsletter h5 {
+    text-align: right;
+    padding-right: 0.5em;
+  }
+}
+#page-newsletter input {
+  margin: 0 0;
+}
+@media only screen and (min-width: 40.063em) {
+  #page-newsletter .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 #page-links h5 {
   color: ivory;
 }
-#page-links li {
+#page-links ul {
   list-style: none;
-}
-#page-links #footer-social-media {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin-left: 0;
 }
 #page-links #footer-social-media a {
   margin-bottom: 0.5em;
 }
 #page-links #footer-social-media a svg {
-  width: 4em;
-  height: 4em;
-}
-@media only screen and (min-width: 40.063em) {
-  #page-links #footer-social-media a svg:hover {
-    -webkit-transition: all 0.3s ease-in-out 300ms ease-out;
-            transition: all 0.3s ease-in-out 300ms ease-out;
-    box-shadow: 0px 0px 25px rgba(255, 255, 240, 0.5);
-  }
+  width: 2em;
+  height: 2em;
+  margin-right: 0.5em;
 }
