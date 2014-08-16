@@ -1,21 +1,38 @@
 <?php
 if(isset($_POST['submit'])) {
-	$to = "baronvonbadguy+tbr@gmail.com";
+	if ($_POST['destination'] == 'feedback') {
+		//put your general feedback email here
+		$to = 'baronvonbadguy+feedback@gmail.com';
+	}
+	if ($_POST['destination'] == 'learn-earn') {
+		//put your learn & earn email here
+		$to = 'baronvonbadguy+learnearn@gmail.com';
+	}
+	if ($_POST['destination'] == 'volunteer') {
+		//put your volunteering email here
+		$to = 'baronvonbadguy+volunteer@gmail.com';
+	}
+	if ($_POST['destination'] == 'donate') {
+		//put your bike donations email here
+		$to = 'baronvonbadguy+donate@gmail.com';
+	}
 	 
-	// data the visitor provided
-	$name_field = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-	$email_field = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-	$subject_field = filter_var($_POST['subject'], FILTER_SANITIZE_STRING)
-	$message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-	 
-	//constructing the message
-	$body = " From: $name_field\n\n E-Mail: $email_field\n\n Message:\n\n $message";
-	 
-	// ...and away we go!
-	mail($to, $subject_field, $body);
-	 
+	 if ( strstr($_POST['eman'], '@') == false ) {
+	 	// data the visitor provided
+		$name_field = filter_var($_POST['eman'], FILTER_SANITIZE_STRING);
+		$email_field = filter_var($_POST['liame'], FILTER_VALIDATE_EMAIL);
+		$subject_field = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+		$message_field = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+		 
+		//constructing the message
+		$body = " From: $name_field\n\n E-Mail: $email_field\n\n Message: $message_field\n\n";
+		if ($_POST['name'] == '' && $_POST['email'] == '') {
+			// ...and away we go!
+			mail($to, $subject_field, $body);
+		}
+	 }
 	// redirect to confirmation
-	header('Location: confirmation.htm');
+	header('Location: ../confirmation.html');
 } else {
 // handle the error somehow
 }

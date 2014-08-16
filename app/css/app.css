@@ -5810,10 +5810,6 @@ h5 {
   font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
-form.custom {
-  background-color: #444444;
-}
-
 .full-width {
   width: 100%;
   margin-left: auto;
@@ -5917,6 +5913,24 @@ form.custom {
 .flex-center.darken.darker {
   background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+input[name="name"], input[name="email"], input[name="dont check"] {
+  visibility: hidden;
+  display: none;
+}
+
+#contact-form-container {
+  margin: 1em auto;
+  padding: 1em;
+  background-color: #444444;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #444444;
+}
+#contact-form-container .button {
+  margin: 0 auto;
+  width: 100%;
 }
 
 #page-splash {

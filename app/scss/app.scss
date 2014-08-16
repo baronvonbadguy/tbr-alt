@@ -114,9 +114,6 @@ h5 {
   font-family: Arial, Helvetica, sans-serif;
   font-family: 'Open Sans', Helvetica, sans-serif;
 }
-form.custom {
-  background-color: #444444;
-}
 .full-width {
   width: 100%;
   margin-left: auto;
@@ -172,7 +169,23 @@ form.custom {
     }
   }
 }
+input[name="name"], input[name="email"], input[name="dont check"] {
+  visibility: hidden;
+  display: none;
+}
+#contact-form-container {
+  margin: 1em auto;
+  padding: 1em;
+  background-color: #444444;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #444444;
 
+  .button {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
 //----------------------------------------
 //--------------P A G E S----------------
 //----------------------------------------
@@ -347,6 +360,7 @@ form.custom {
   }
   h2 {
     text-align: center;
+
   }
 }
 

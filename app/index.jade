@@ -1,6 +1,9 @@
 doctype html
 html(class="no-js", lang="en")
 	include header
+		title Welcome to Troy Bike Rescue
+		meta(content="troy, community, nonprofit, bicycles, bike, rescue, recycling" name="keywords")
+		meta(content="All you need to know about Troy Bike Rescue" name="description")
 	mixin svg-sprite(id)
 		//got my svg sprite sheet on a 100px base grid
 		- if (!attributes.viewbox) {
@@ -41,7 +44,7 @@ html(class="no-js", lang="en")
 							build bicycle community in the capital region through hands-on education.  We 
 							accept donations of any bikes, parts, or tools.
 
-		//bewlow the fold loading
+		//below the fold loading
 		.svg-wrapper(style="display: none;")
 			include images/svg-sprites.svg
 
@@ -90,7 +93,7 @@ html(class="no-js", lang="en")
 											Self-service workshop run by and dedicated to empowering, 
 											Women, Trans, Fem, Queer and anyone for whom gender has been a barrier in learning bike mechanics.
 		.row.full-width
-			#page-learn-earn.small-12.columns
+			#page-learn-earn.small-12.colunms
 				.row
 					+svg-sprite('brain')
 					h1 LEARN &amp; EARN
@@ -146,20 +149,25 @@ html(class="no-js", lang="en")
 						h1 GET IN TOUCH
 						h2 Send us a message and we'll get back as soon as possible!
 				.row
-					#contact-form-container.small-12.medium-6.medium-centered.columns
-						form(method="post").custom
+					#contact-form-container.small-10.small-centered.medium-7.large-5.xlarge-4.columns
+						form(action="php/mailer.php" method="POST").custom
 							.row
 								.small-12.columns
+									input(type="text" name="eman" placeholder="Name")
 									input(type="text" name="name" placeholder="Name")
+									input(type="email" name="liame" placeholder="Email")
 									input(type="email" name="email" placeholder="Email")
 									input(type="text" name="subject" placeholder="Subject")
-									select
-										option General Feedback
-										option Learn &amp; Earn Classes
-										option Become a Volunteer
-										option Donating Bikes
-									textarea(placeholder="Write your message here")
-									#captcha
+									input(type="checkbox" name="dont check")
+									select(name="destination")
+										option(value="" disabled selected) Why are you writing?
+										option(value="feedback") General Feedback
+										option(value="learn-earn") Learn &amp; Earn Classes
+										option(value="volunteer") Become a Volunteer
+										option(value="donate") Donating Bikes
+									textarea(name="message" rows="5" placeholder="Write your message here")
+							.row
+								.small-6.small-centered.columns
 									input.button(name="submit" type="submit" value="Send!")
 		.row.full-width
 			#page-newsletter.small-12.columns
