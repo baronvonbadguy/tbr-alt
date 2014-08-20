@@ -149,7 +149,7 @@ html(class="no-js", lang="en")
 						h1 GET IN TOUCH
 						h2 Send us a message and we'll get back as soon as possible!
 				.row
-					#contact-form-container.small-10.small-centered.medium-7.large-5.xlarge-4.columns
+					#contact-form-container.small-12.small-centered.medium-7.large-5.xlarge-4.columns
 						form(action="php/mailer.php" method="POST").custom
 							.row
 								.small-12.columns
@@ -184,7 +184,7 @@ html(class="no-js", lang="en")
 		.row.full-width
 			#page-links.small-12.columns
 				.row
-					.small-12.medium-4.columns
+					.small-12.medium-4.medium-push-2.columns
 						h5 Our Friends
 						ul
 							li: a(href="//www.albanybicyclecoalition.com/") Albany Bicycle Coalition
@@ -195,15 +195,18 @@ html(class="no-js", lang="en")
 							li: a(href="//alehousetroy.com/") The Ale House
 							li: a(href="//mediasanctuary.org/") The Sanctuary for Independent Media
 							li: a(href="//www.facebook.com/pages/Xs-to-Os-Vegan-Bakery/119997688525") Xs to Os Vegan Bakery
-					.small-12.medium-4.columns
+					.small-12.medium-4.medium-pull-2.columns
 						h5 Keep Connected
 						#footer-social-media
-							a(href="http://www.facebook.com/troybikerescue")
+							a(href="//www.facebook.com/troybikerescue")
 								+svg-sprite('facebook')
-							a(href="https://twitter.com/troybikerescue")
+							a(href="//twitter.com/troybikerescue")
 								+svg-sprite('twitter')
-							a(href="http://instagram.com/troybikerescue")
+							a(href="//instagram.com/troybikerescue")
 								+svg-sprite('instagram')
+						#footer-logo
+							a(href="#")
+								+svg-sprite('wrench')(viewbox="0 0 100 90")
 						h5 Troy Bike Rescue
 						h5 
 							a(href="//maps.apple.com/?daddr=3280+6th+Avenue+Troy,+NY+12180")= "3280 6th Avenue Troy, NY 12180"

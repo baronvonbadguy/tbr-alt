@@ -5922,6 +5922,37 @@ input[name="name"], input[name="email"], input[name="dont check"] {
   width: 100%;
 }
 
+#confirmation_container {
+  background-image: url("/images/confirmation.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+}
+@media only screen and (min-width: 64.063em) {
+  #confirmation_container {
+    background-attachment: fixed;
+  }
+}
+#confirmation_container h1 {
+  font-size: 2.5em;
+}
+@media only screen and (min-width: 40.063em) {
+  #confirmation_container h1 {
+    font-size: 4em;
+  }
+}
+#confirmation_container h2 {
+  color: ivory;
+  font-size: 1.5em;
+}
+@media only screen and (min-width: 40.063em) {
+  #confirmation_container h2 {
+    font-size: 2.5em;
+  }
+}
+
 #page-splash {
   overflow-y: hidden;
   height: 568px;
@@ -6171,6 +6202,9 @@ input[name="name"], input[name="email"], input[name="dont check"] {
     margin: 1em auto;
   }
 }
+#page-adopt-a-bike .svg-sprite use, #page-learn-earn .svg-sprite use, #page-about .svg-sprite use, #page-contact .svg-sprite use {
+  fill: #2d2d2d;
+}
 #page-adopt-a-bike h1, #page-learn-earn h1, #page-about h1, #page-contact h1 {
   color: #222222;
   text-decoration: overline;
@@ -6195,7 +6229,7 @@ input[name="name"], input[name="email"], input[name="dont check"] {
 @media only screen and (max-width: 40em) {
   #page-volunteer h1 {
     font-size: 3.0em;
-    font-size: 12vw;
+    font-size: 13vw;
     letter-spacing: .03em;
   }
 }
@@ -6234,12 +6268,25 @@ input[name="name"], input[name="email"], input[name="dont check"] {
   }
 }
 
+#page-links {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
 #page-links h5 {
   color: ivory;
 }
 #page-links ul {
   list-style: none;
   margin-left: 0;
+}
+#page-links #footer-logo {
+  height: 4em;
+  width: 4em;
+  margin: 0.3em auto 0 auto;
+}
+#page-links #footer-logo .svg-sprite use {
+  fill: ivory;
 }
 #page-links #footer-social-media a {
   margin-bottom: 0.5em;

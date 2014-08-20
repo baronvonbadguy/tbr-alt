@@ -186,6 +186,24 @@ input[name="name"], input[name="email"], input[name="dont check"] {
     width: 100%;
   }
 }
+#confirmation_container {
+  @include background-image('/images/confirmation.jpg');
+  height: 100%;
+  text-align: center;
+  h1 {
+    font-size: 2.5em;
+    @include media(tablet) {
+      font-size: 4em;
+    }
+  }
+  h2 {
+    color: ivory;
+    font-size: 1.5em;
+    @include media(tablet) {
+      font-size: 2.5em;
+    }
+  }
+}
 //----------------------------------------
 //--------------P A G E S----------------
 //----------------------------------------
@@ -353,6 +371,9 @@ input[name="name"], input[name="email"], input[name="dont check"] {
     @include media(tablet) {
       margin: 1em auto;
     }
+    use {
+      fill: #2d2d2d;
+    }
   }
   h1 {
     color: #222222;
@@ -371,7 +392,7 @@ input[name="name"], input[name="email"], input[name="dont check"] {
   h1 {
     @include media(mobile) {
       font-size: 3.0em;
-      font-size: 12vw;
+      font-size: 13vw;
       letter-spacing: .03em;
     }
   }
@@ -408,12 +429,25 @@ input[name="name"], input[name="email"], input[name="dont check"] {
 }
 
 #page-links {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
   h5 {
     color: ivory;
   }
   ul {
     list-style: none;
     margin-left: 0;
+  }
+  #footer-logo {
+    height: 4em;
+    width: 4em;
+    margin: 0.3em auto 0 auto;
+    .svg-sprite {
+      & use {
+        fill: ivory;
+      }
+    }
   }
   #footer-social-media {
     a {
