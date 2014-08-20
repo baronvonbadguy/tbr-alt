@@ -10,3 +10,4 @@ $(window).load(function() {
 		$('#page-gallery').toggleClass('hi-res');
 	}
 });
+

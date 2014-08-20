@@ -377,14 +377,18 @@
         </div>
         <div class="row">
           <div id="contact-form-container" class="small-12 small-centered medium-7 large-5 xlarge-4 columns">
-            <form action="php/mailer.php" method="POST" class="custom">
+            <form data-abide action="php/mailer.php" method="POST" class="custom">
               <div class="row">
                 <div class="small-12 columns">
-                  <input type="text" name="eman" placeholder="Name">
+                  <div class="name-field">
+                    <input required type="text" name="eman" placeholder="Name"><small class="error">A first and last name is required</small>
+                  </div>
                   <input type="text" name="name" placeholder="Name">
-                  <input type="email" name="liame" placeholder="Email">
+                  <div class="email-field">
+                    <input required type="email" name="liame" placeholder="Email"><small class="error">A valid email address is required</small>
+                  </div>
                   <input type="email" name="email" placeholder="Email">
-                  <input type="text" name="subject" placeholder="Subject">
+                  <input required type="text" name="subject" placeholder="Subject">
                   <input type="checkbox" name="dont check">
                   <select name="destination">
                     <option value="" disabled selected>Why are you writing?</option>
@@ -393,7 +397,7 @@
                     <option value="volunteer">Become a Volunteer</option>
                     <option value="donate">Donating Bikes</option>
                   </select>
-                  <textarea name="message" rows="5" placeholder="Write your message here"></textarea>
+                  <textarea required name="message" rows="5" placeholder="Write your message here"></textarea>
                 </div>
               </div>
               <div class="row">

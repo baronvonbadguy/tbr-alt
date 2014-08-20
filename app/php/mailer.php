@@ -1,20 +1,24 @@
 <?php
 if(isset($_POST['submit'])) {
+	if ($_POST['destination'] == '') {
+		//put your default email here
+		$to = 'user@domain.com';
+	}
 	if ($_POST['destination'] == 'feedback') {
 		//put your general feedback email here
-		$to = 'baronvonbadguy+feedback@gmail.com';
+		$to = 'user@domain.com';
 	}
 	if ($_POST['destination'] == 'learn-earn') {
 		//put your learn & earn email here
-		$to = 'baronvonbadguy+learnearn@gmail.com';
+		$to = 'user@domain.com';
 	}
 	if ($_POST['destination'] == 'volunteer') {
 		//put your volunteering email here
-		$to = 'baronvonbadguy+volunteer@gmail.com';
+		$to = 'user@domain.com';
 	}
 	if ($_POST['destination'] == 'donate') {
 		//put your bike donations email here
-		$to = 'baronvonbadguy+donate@gmail.com';
+		$to = 'user@domain.com';
 	}
 	 
 	 if ( strstr($_POST['eman'], '@') == false ) {

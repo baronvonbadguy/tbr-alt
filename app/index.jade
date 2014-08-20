@@ -150,14 +150,18 @@ html(class="no-js", lang="en")
 						h2 Send us a message and we'll get back as soon as possible!
 				.row
 					#contact-form-container.small-12.small-centered.medium-7.large-5.xlarge-4.columns
-						form(action="php/mailer.php" method="POST").custom
+						form(data-abide action="php/mailer.php" method="POST").custom
 							.row
 								.small-12.columns
-									input(type="text" name="eman" placeholder="Name")
+									.name-field
+										input(required type="text" name="eman" placeholder="Name")
+										small.error() A first and last name is required
 									input(type="text" name="name" placeholder="Name")
-									input(type="email" name="liame" placeholder="Email")
+									.email-field
+										input(required type="email" name="liame" placeholder="Email")
+										small.error() A valid email address is required
 									input(type="email" name="email" placeholder="Email")
-									input(type="text" name="subject" placeholder="Subject")
+									input(required type="text" name="subject" placeholder="Subject")
 									input(type="checkbox" name="dont check")
 									select(name="destination")
 										option(value="" disabled selected) Why are you writing?
@@ -165,7 +169,7 @@ html(class="no-js", lang="en")
 										option(value="learn-earn") Learn &amp; Earn Classes
 										option(value="volunteer") Become a Volunteer
 										option(value="donate") Donating Bikes
-									textarea(name="message" rows="5" placeholder="Write your message here")
+									textarea(required name="message" rows="5" placeholder="Write your message here")
 							.row
 								.small-6.small-centered.columns
 									input.button(name="submit" type="submit" value="Send!")
