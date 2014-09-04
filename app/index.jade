@@ -4,17 +4,8 @@ html(class="no-js", lang="en")
 		title Welcome to Troy Bike Rescue
 		meta(content="troy, community, nonprofit, bicycles, bike, rescue, recycling" name="keywords")
 		meta(content="All you need to know about Troy Bike Rescue" name="description")
-	mixin svg-sprite(id)
-		//got my svg sprite sheet on a 100px base grid
-		- if (!attributes.viewbox) {
-		-		attributes.viewbox = "0 0 100 100";
-		-	}
-		svg.svg-sprite(viewbox=attributes.viewbox class=attributes.class)
-			use(xlink:href=("#" + id))
 	body
 		.font-preloader(style="font-family: 'League Gothic';")
-		.svg-wrapper(style="display: none;")
-			include images/svg-sprites--above-the-fold.svg
 		.row.full-width
 			#page-splash.small-12.columns
 				.row.flex-center.collapse
@@ -26,15 +17,15 @@ html(class="no-js", lang="en")
 							a(href="tel:1-518-328-4827")= "(518) 328-4827"
 					#splash-social-media
 						a(href="http://www.facebook.com/troybikerescue")
-							+svg-sprite('facebook')
+							.sprite.facebook.small
 						a(href="https://twitter.com/troybikerescue")
-							+svg-sprite('twitter')
+							.sprite.twitter.small
 						a(href="http://instagram.com/troybikerescue")
-							+svg-sprite('instagram')
+							.sprite.instagram.small
 		.row.full-width
 			#page-about.small-12.columns
 				.row
-					+svg-sprite('wrench')(viewbox="0 0 100 90")
+					.sprite.wrench
 					h1 WHO WE ARE
 				.row
 					.small-12.medium-8.large-6.xlarge-4.medium-centered.columns
@@ -43,10 +34,6 @@ html(class="no-js", lang="en")
 							bikes from the waste stream and getting them back on the streets.  We help to 
 							build bicycle community in the capital region through hands-on education.  We 
 							accept donations of any bikes, parts, or tools.
-
-		//below the fold loading
-		.svg-wrapper(style="display: none;")
-			include images/svg-sprites.svg
 
 		.row.full-width
 			#page-programs.small-12.columns
@@ -58,7 +45,7 @@ html(class="no-js", lang="en")
 							li.blockgrid-li
 								.program#program--open-shop(data-equalizer-watch)
 									.small-2.medium-4.large-12.columns
-										+svg-sprite('lock')
+										.sprite.lock.resize
 									.small-5.medium-8.large-12.columns
 										h2 OPEN SHOP
 									.small-5.medium-8.large-12.columns
@@ -70,7 +57,7 @@ html(class="no-js", lang="en")
 							li.blockgrid-li
 								.program#program--youth-shop(data-equalizer-watch)
 									.small-2.medium-4.large-12.columns
-										+svg-sprite('child')
+										.sprite.child.resize
 									.small-5.medium-8.large-12.columns
 										h2 YOUTH SHOP
 									.small-5.medium-8.large-12.columns
@@ -83,7 +70,7 @@ html(class="no-js", lang="en")
 							li.blockgrid-li
 								.program#program--fem-shop(data-equalizer-watch)
 									.small-2.medium-4.large-12.columns
-										+svg-sprite('trans')
+										.sprite.trans.resize
 									.small-5.medium-8.large-12.columns
 										h2 FEM SHOP
 									.small-5.medium-8.large-12.columns
@@ -95,7 +82,7 @@ html(class="no-js", lang="en")
 		.row.full-width
 			#page-learn-earn.small-12.colunms
 				.row
-					+svg-sprite('brain')
+					.sprite.brain
 					h1 LEARN &amp; EARN
 				.row
 					.small-12.medium-8.large-6.xlarge-4.medium-centered.columns
@@ -121,7 +108,7 @@ html(class="no-js", lang="en")
 		.row.full-width
 			#page-adopt-a-bike
 				.row
-					+svg-sprite('bicycle')(viewbox="0 0 100 55")
+					.sprite.bicycle
 					h1 ADOPT A BIKE
 				.row
 					.small-12.medium-8.large-6.medium-centered.columns
@@ -157,7 +144,7 @@ html(class="no-js", lang="en")
 			#page-contact.small-12.columns
 				.row
 					.small-12.columns
-						+svg-sprite('mail')
+						.sprite.mail
 						h1 GET IN TOUCH
 						h2 Send us a message and we'll get back as soon as possible!
 				.row
@@ -202,15 +189,15 @@ html(class="no-js", lang="en")
 					.small-12.medium-4.medium-pull-2.columns
 						h5 Keep Connected
 						#footer-social-media
-							a(href="//www.facebook.com/troybikerescue")
-								+svg-sprite('facebook')
-							a(href="//twitter.com/troybikerescue")
-								+svg-sprite('twitter')
-							a(href="//instagram.com/troybikerescue")
-								+svg-sprite('instagram')
+							a(href="http://www.facebook.com/troybikerescue")
+								.sprite.facebook.small
+							a(href="https://twitter.com/troybikerescue")
+								.sprite.twitter.small
+							a(href="http://instagram.com/troybikerescue")
+								.sprite.instagram.small
 						#footer-logo
 							a(href="#")
-								+svg-sprite('wrench')(viewbox="0 0 100 90")
+								.sprite.wrench-inverted
 						h5 Troy Bike Rescue
 						h5 
 							a(href="//maps.apple.com/?daddr=3280+6th+Avenue+Troy,+NY+12180")= "3280 6th Avenue Troy, NY 12180"

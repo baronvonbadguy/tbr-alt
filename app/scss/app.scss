@@ -58,6 +58,107 @@
   font-family: 'League Gothic', Charcoal, sans-serif;
 }
 
+@mixin sprite($index) {
+  background: url('/images/sprite.png') (-100px * $index) 0px no-repeat;
+  background: rgba(0,0,0,0) url('/images/sprite.svg') (-100px * $index) 0px no-repeat;
+}
+
+@mixin sprite-cust($index, $size) {
+  background: url('/images/sprite.png') (-$size * $index) 0px no-repeat;
+  background: rgba(0,0,0,0) url('/images/sprite.svg') (-$size * $index) 0px no-repeat;
+  background-size: ($size * 11) $size;
+}
+
+//----------------------------------------
+//--------------S P R I T E S-------------
+//----------------------------------------
+$small-sprite-size: 50px;
+$medium-sprite-size: ($small-sprite-size * 1.5);
+.sprite {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;  
+  &.small {
+    width: $small-sprite-size;
+    height: $small-sprite-size;
+  }
+  &.resize {
+    @include media(mobile) {
+      margin-top: 5px;
+      width: $small-sprite-size;
+      height: $small-sprite-size;
+    }
+    @include media(tablet) {
+      width: $medium-sprite-size;
+      height: $medium-sprite-size;
+    }
+  }
+  //social media
+  &.facebook { 
+    @include sprite(3); 
+    &.small {
+      @include sprite-cust(3, $small-sprite-size);
+    }
+  }
+  &.twitter {
+  @include sprite(2); 
+    &.small {
+      @include sprite-cust(2, $small-sprite-size);
+    }
+  }
+  &.instagram {
+    @include sprite(1);
+    &.small {
+      @include sprite-cust(1, $small-sprite-size);
+    }
+  }
+  &.wrench {
+    @include sprite(0);
+    &.small {
+      @include sprite-cust(0, $small-sprite-size);
+    }
+  }
+  //footer wrench
+  &.wrench-inverted {
+    @include sprite(10);
+    &.small {
+      @include sprite-cust(10, $small-sprite-size);
+    }
+  }
+  //programs icons
+  &.lock { 
+    @include sprite(7); 
+    @include media(mobile) {
+      @include sprite-cust(7, $small-sprite-size);
+    }
+    @include media(tablet) {
+      @include sprite-cust(7, $medium-sprite-size);
+    }
+  }
+  &.child {
+    @include sprite(6);
+    @include media(mobile) {
+      @include sprite-cust(6, $small-sprite-size);
+    }
+    @include media(tablet) {
+      @include sprite-cust(6, $medium-sprite-size);
+    }
+  }
+  &.trans {
+    @include sprite(8);
+    @include media(mobile) {
+      @include sprite-cust(8, $small-sprite-size);
+    }
+    @include media(tablet) {
+      @include sprite-cust(8, $medium-sprite-size);
+    }
+  }
+
+  &.brain { @include sprite(5); }
+  &.bicycle { @include sprite(9); }
+  &.mail { @include sprite(4); }
+}
+
 //----------------------------------------
 //----------G L O B A L  V A R S----------
 //----------------------------------------
@@ -232,10 +333,7 @@ input[name="name"], input[name="email"], input[name="dont check"] {
     justify-content: center;
     margin-top: 1em;
     & > a {
-      height: 3.5em;
-      width: 3.5em;
       margin: 15px;
-
     }
   }
   #splash-address {
@@ -273,23 +371,6 @@ input[name="name"], input[name="email"], input[name="dont check"] {
       background-color: transparent;
     }
   }
-
-  //icon styling
-    svg {
-      width: 100%;
-      height: 2em;
-      overflow: hidden;
-      @include media(mobile) {
-        height: 2.5em;
-        margin-top: 0.4em;
-      }
-      @include media(tablet) {
-        height: 4em;
-      }
-      @include media(desktop) {
-        height: 6em;
-      }
-    }
 
   //text styling
   p, h2, h5{
@@ -362,18 +443,7 @@ input[name="name"], input[name="email"], input[name="dont check"] {
 #page-adopt-a-bike, #page-learn-earn, #page-about, #page-contact {
   background-color: ivory;
   padding: 1em;
-  .svg-sprite {
-    display: block;
-    width: 11em;
-    height: 8em;
-    margin: 0 auto;
-    @include media(tablet) {
-      margin: 1em auto;
-    }
-    use {
-      fill: #2d2d2d;
-    }
-  }
+
   h1 {
     color: #222222;
     text-decoration: overline;
@@ -438,24 +508,13 @@ input[name="name"], input[name="email"], input[name="dont check"] {
     list-style: none;
     margin-left: 0;
   }
-  #footer-logo {
-    height: 4em;
-    width: 4em;
-    margin: 0.3em auto 0 auto;
-    .svg-sprite {
-      & use {
-        fill: ivory;
-      }
-    }
-  }
+
   #footer-social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     a {
-      margin-bottom: 0.5em;
-      svg {
-        width: 2em;
-        height: 2em;
-        margin-right: 0.5em;
-      }
+      margin: 0 0.25em 0.5em 0.25em;
     }
   }
 }
